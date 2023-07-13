@@ -11,15 +11,25 @@ Install it using your favorite nvim package manager, This is how to do it with [
 
 ```lua
 { "gremble0/yellowbeans.nvim" }
+
+-- With lazy you could also run the command to apply the theme here
+{
+  "gremble0/yellowbeans.nvim"
+  config = function()
+    vim.cmd.colorscheme("yellowbeans")
+  end
+}
 ```
 
 ## Usage
 After installing it the theme is available as a colorscheme inside neovim.
 
 ```vim
+" Vimscript
 colorscheme yellowbeans
 ```
 
 ```lua
-vim.cmd.colorscheme "yellowbeans"
+-- Lua
+vim.cmd.colorscheme("yellowbeans")
 ```
