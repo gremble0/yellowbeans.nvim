@@ -2,6 +2,8 @@ local hi = function(hl_group, colors)
   vim.api.nvim_set_hl(0, hl_group, colors)
 end
 
+local M = {}
+
 local bg = "#151515"
 local fg = "#cccccc"
 local black_one = "#101010"
@@ -26,7 +28,7 @@ local bad = "#d22b2b"
 local neutral = "#ffa500"
 local good = "#60a840"
 
-local load_theme = function()
+M.style = function()
   -- Main highlight groups
   hi("Normal", { fg = fg, bg = bg })
   hi("Cursor", { fg = bg, bg = fg })
@@ -187,3 +189,5 @@ local load_theme = function()
   hi("NvimTreeWinSeparator", { fg = black_one, bg = black_one })
   hi("NvimTreeNormal", { bg = black_one})
 end
+
+return M
