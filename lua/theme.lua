@@ -54,9 +54,10 @@ M.style = function()
   -- Text
   hi("Comment", { fg = p.gray_two })
   hi("LineNr", { link = "Comment" })
+  hi("Special", { fg = p.shipcove_blue })
   hi("SpecialKey", { link = "Comment" })
   hi("CursorLineNr", { link = "Normal" })
-  hi("MatchParen", { fg = p.good })
+  hi("MatchParen", { fg = p.gold_yellow })
   hi("Title", { fg = p.good })
 
   hi("Bold", { bold = true })
@@ -132,15 +133,17 @@ M.style = function()
 
   -- Treesitter
   hi("TSNamespace", { fg = p.wewak_pink })
-  hi("TSVariable", { link = "Identifier" }) -- Normal
   hi("TSDelimiter", { fg = p.hoki_blue })
+
+  hi("TSStringRegex", { fg = p.sienna_orange })
+  hi("TSStringEscape", { fg = p.sienna_orange })
+
+  hi("TSURI", { fg = p.morningglory_blue, underline = true })
   hi("TSEmphasis", { italic = true })
   hi("TSUnderline", { underline = true })
   hi("TSStrike", { strikethrough = true })
-  hi("TSURI", { fg = p.morningglory_blue, underline = true })
 
-  -- Lualine
-  hi("lualine_a_visual", { bg = p.morningglory_blue })
+  hi("TSError", { link = "Error" })
 
   -- Telescope
   hi("TelescopeBorder", { link = "VertSplit" })
