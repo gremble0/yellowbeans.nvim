@@ -1,3 +1,6 @@
+---@param hl_group string highlight group to apply the options given in the colors table
+---@param colors table<string, any> list of colors, links to other highlight groups or other gui modifiers for the given hl_group. 
+--- For more info see `:help nvim_set_hl()`
 local hi = function(hl_group, colors)
   vim.api.nvim_set_hl(0, hl_group, colors)
 end
@@ -10,7 +13,7 @@ M.palette = {
 
   black_one = "#101010",
   black_two = "#191919",
-  black_three = "#1c1c1c",
+  black_three = "#282828",
   white_one = "#aaaaaa",
   gray_one = "#333333",
   gray_two = "#606060",
@@ -33,7 +36,7 @@ M.palette = {
 
 local p = M.palette
 
-M.style = function()
+M.setup = function()
   -- Main highlight groups
   hi("Normal", { fg = p.fg, bg = p.bg })
   hi("Cursor", { fg = p.bg, bg = p.fg })
@@ -46,7 +49,7 @@ M.style = function()
   hi("CursorLine", { link = "ColorColumn" })
   hi("VertSplit", { fg = p.black_three })
 
-  hi("StatusLine", { fg = p.fg, bg = p.black_two })
+  hi("StatusLine", { link = "ColorColumn" })
   hi("StatusLineNC", { fg = p.white_one, bg = p.black_two })
 
   hi("Visual", { bg = p.gray_one })
@@ -67,7 +70,8 @@ M.style = function()
   hi("Todo", { fg = p.olive_green })
 
   -- Menus
-  hi("Pmenu", { fg = p.fg, bg = p.black_three })
+  hi("Pmenu", { fg = p.fg, bg = p.bg })
+  hi("PmenuBg", { link = "VertSplit" })
   hi("PmenuSel", { fg = p.bg, bg = p.gold_yellow })
   hi("PmenuSbar", { fg = p.gold_yellow, bg = p.bg })
   hi("PmenuThumb", { fg = p.gray_one, bg = p.gray_one })
@@ -121,7 +125,7 @@ M.style = function()
 
   hi("Delimiter", { fg = p.hoki_blue })
 
-  -- Plugin settings
+  -- [[ Plugin settings ]]
   -- GitSigns
   hi("GitSignsAdd", { fg = p.good })
   hi("GitSignsChange", { fg = p.neutral })
@@ -192,7 +196,7 @@ M.style = function()
   hi("CmpItemKindValue", { link = "CmpItemKindFunction" })
 
   -- Indent-blankline
-  hi("IndentBlanklineChar", { fg = p.gray_one, nocombine = true })
+  hi("IndentBlanklineChar", { fg = p.black_three, nocombine = true })
 
   -- Nvimtree
   hi("NvimTreeWindowPicker", { fg = p.gold_yellow, bg = p.black_two })
