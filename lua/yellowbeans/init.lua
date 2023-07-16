@@ -7,34 +7,7 @@ end
 
 local M = {}
 
-M.palette = {
-  bg = "#151515",
-  fg = "#cccccc",
-
-  black_one = "#101010",
-  black_two = "#191919",
-  black_three = "#282828",
-  white_one = "#aaaaaa",
-  gray_one = "#333333",
-  gray_two = "#606060",
-
-  gold_yellow = "#e1b655",
-  koromiko_yellow = "#ffb964",
-  olive_green = "#9aae6b",
-  sienna_orange = "#cf6a4c",
-  morningglory_blue = "#8fbfdc",
-  shipcove_blue = "#8197bf",
-  perano_blue = "#b0d0f0",
-  hoki_blue = "#668799",
-  purple_one = "#b6a6ff",
-  wewak_pink = "#f0a0c0",
-
-  bad = "#d22b2b",
-  neutral = "#ffa500",
-  good = "#60a840",
-}
-
-local p = M.palette
+local p = require("yellowbeans.styles").palette
 
 M.setup = function()
   -- Main highlight groups
@@ -76,6 +49,9 @@ M.setup = function()
   hi("PmenuSbar", { fg = p.gold_yellow, bg = p.bg })
   hi("PmenuThumb", { fg = p.gray_one, bg = p.gray_one })
   hi("Search", { fg = p.bg, bg = p.gold_yellow })
+
+  -- Used by floating windows such as `:LspInfo` and `vim.lsp.buf.hover`
+  -- hi("NormalFloat", { bg = p.black_two })
 
   -- Diff mode highlight groups (used as links as well)
   hi("DiffAdd", { fg = p.good })
