@@ -12,7 +12,11 @@ local p = require("yellowbeans.styles").palette
 M.setup = function()
   -- Main highlight groups
   hi("Normal", { fg = p.fg, bg = p.bg })
+  hi("Conceal", { link = "Normal" })
+  hi("NonText", { fg = p.fg })
+
   hi("Cursor", { fg = p.bg, bg = p.fg })
+  hi("TermCursor", { link = "Cursor" })
 
   -- Background things
   hi("SignColumn", { fg = p.fg, bg = p.bg })
@@ -48,7 +52,9 @@ M.setup = function()
   hi("PmenuSel", { fg = p.bg, bg = p.gold_yellow })
   hi("PmenuSbar", { fg = p.gold_yellow, bg = p.bg })
   hi("PmenuThumb", { fg = p.gray_one, bg = p.gray_one })
+
   hi("Search", { fg = p.bg, bg = p.gold_yellow })
+  hi("IncSearch", { link = "Search" })
 
   -- Used by floating windows such as `:LspInfo` and `vim.lsp.buf.hover`
   -- hi("NormalFloat", { bg = p.black_two })
@@ -101,7 +107,7 @@ M.setup = function()
 
   hi("Delimiter", { fg = p.hoki_blue })
 
-  -- [[ Plugin settings ]]
+  --[[ Plugin settings ]]
   -- GitSigns
   hi("GitSignsAdd", { fg = p.good })
   hi("GitSignsChange", { fg = p.neutral })
@@ -153,18 +159,18 @@ M.setup = function()
   hi("CmpItemKindEnumMember", { link = "CmpItemKindConstant" })
 
   hi("CmpItemKindStruct", { link = "Structure" })
-  hi("CmpItemKindClass", { link = "Structure" })
-  hi("CmpItemKindModule", { link = "Structure" })
-  hi("CmpItemKindInterface", { link = "Structure" })
-  hi("CmpItemKindColor", { link = "Structure" })
+  hi("CmpItemKindClass", { link = "CmpItemKindStruct" })
+  hi("CmpItemKindModule", { link = "CmpItemKindStruct" })
+  hi("CmpItemKindInterface", { link = "CmpItemKindStruct" })
+  hi("CmpItemKindColor", { link = "CmpItemKindStruct" })
 
   hi("CmpItemKindOperator", { link = "Operator" })
 
   hi("CmpItemKindUnit", { link = "String" })
   hi("CmpItemKindSnippet", { link = "CmpItemKindUnit" })
 
-  hi("CmpItemKindFile", { link = "Directory" })
   hi("CmpItemKindFolder", { link = "Directory" })
+  hi("CmpItemKindFile", { link = "CmpItemKindFolder" })
 
   hi("CmpItemKindFunction", { link = "Function" })
   hi("CmpItemKindTypeParameter", { link = "CmpItemKindFunction" })
