@@ -73,6 +73,15 @@ M.hl_groups = {
 
   { "Visual", { bg = p.gray_one } },
 
+  -- Diff mode
+  { "Folded", { link = "Comment" } },
+  { "FoldColumn", { link = "Folded" } },
+
+  -- Tabline
+  { "TabLineSel", { fg = p.gold_yellow, bold = true } },
+  { "Tabline", { bg = p.gray_one } },
+  { "TablineFill", { bg = p.bg } },
+
   -- Text
   { "Comment", { fg = p.gray_two } },
   { "LineNr", { link = "Comment" } },
