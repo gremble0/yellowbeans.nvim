@@ -109,7 +109,7 @@ M.hl_groups = {
   { "ErrorMsg", { link = "Error" } },
 
   -- Other
-  { "Directory", { fg = p.gold_yellow } },
+  { "Directory", { fg = p.shipcove_blue } },
 
   -- Preferred groups for syntax highlighting (other groups also refer to these },
   { "Constant", { fg = p.sienna_orange } },
