@@ -232,7 +232,9 @@ M.hl_groups = {
   { "NvimTreeWindowPicker", { fg = p.gold_yellow, bg = p.black_two } },
   { "NvimTreeWinSeparator", { fg = p.black_one, bg = p.black_one } },
   { "NvimTreeNormal", { bg = p.black_one } },
-}
 
+  -- Netrw
+  { "netrwClassify", { link = "Directory" } },
+}
 
 return M
