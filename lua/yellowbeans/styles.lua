@@ -19,9 +19,8 @@ M.palette = {
   gray_two = "#606060",
 
   gold_yellow = "#e1b655",
-  koromiko_yellow = "#ffb964",
   olive_green = "#9aae6b",
-  sienna_orange = "#cf6a4c",
+  moss_green = "#7c9081",
   morningglory_blue = "#8fbfdc",
   shipcove_blue = "#8197bf",
   perano_blue = "#b0d0f0",
@@ -30,8 +29,10 @@ M.palette = {
   wewak_pink = "#f0a0c0",
 
   bad = "#d22b2b",
+  bad_bg = "#543232",
   neutral = "#ffa500",
   good = "#60a840",
+  good_bg = "#2e3127",
 }
 
 -- Table of tables containing special symbols used as a border with the
@@ -121,7 +122,7 @@ M.hl_groups = {
   { "Directory", { fg = p.shipcove_blue } },
 
   -- Preferred groups for syntax highlighting (other groups also refer to these },
-  { "Constant", { fg = p.sienna_orange } },
+  { "Constant", { fg = p.moss_green } },
   { "Character", { link = "Constant" } },
   { "Number", { link = "Constant" } },
   { "Boolean", { link = "Constant" } },
@@ -131,25 +132,24 @@ M.hl_groups = {
   { "StringDelimiter", { link = "String" } },
 
   { "Identifier", { fg = p.purple_one } },
+  { "Typedef", { link = "Identifier" } },
 
-  { "Function", { fg = p.gold_yellow } },
+  { "Function", { fg = p.perano_blue } },
 
-  { "Statement", { fg = p.perano_blue } },
+  { "Statement", { fg = p.gold_yellow, bold = true } },
   { "Conditional", { link = "Statement" } },
   { "Repeat", { link = "Statement" } },
   { "Label", { link = "Statement" } },
   { "Keyword", { link = "Statement" } },
+  { "Operator", { link = "Statement" } },
 
-  { "Operator", { fg = p.morningglory_blue } },
-
-  { "PreProc", { fg = p.gold_yellow } },
+  { "PreProc", { fg = p.moss_green } },
   { "Include", { link = "PreProc" } },
   { "Macro", { link = "PreProc" } },
   { "PreCondit", { link = "PreProc" } },
 
-  { "Type", { fg = p.koromiko_yellow } },
+  { "Type", { fg = p.gold_yellow } },
   { "StorageClass", { link = "Type" } },
-  { "Typedef", { link = "Type" } },
 
   { "Structure", { fg = p.shipcove_blue } },
 
@@ -169,8 +169,8 @@ M.hl_groups = {
   { "TSNamespace", { fg = p.wewak_pink } },
   { "TSDelimiter", { fg = p.hoki_blue } },
 
-  { "TSStringRegex", { fg = p.sienna_orange } },
-  { "TSStringEscape", { fg = p.sienna_orange } },
+  { "TSStringRegex", { fg = p.moss_green } },
+  { "TSStringEscape", { fg = p.moss_green } },
 
   { "TSURI", { fg = p.morningglory_blue, underline = true } },
   { "TSEmphasis", { italic = true } },
@@ -235,6 +235,25 @@ M.hl_groups = {
 
   -- Netrw
   { "netrwClassify", { link = "Directory" } },
+
+  -- Neogit
+  { "NeogitCursorLine", { link = "ColorColumn" } },
+
+  { "NeogitBranch", { fg = p.gold_yellow, bold = true } },
+  { "NeogitRemote", { fg = p.olive_green, bold = true } },
+
+  { "NeogitSectionHeader", { fg = p.gold_yellow, bold = true } },
+  { "NeogitChangeModified", { fg = p.moss_green } },
+  { "NeogitHunkHeader", { fg = p.white_one, bg = p.gray_one } },
+  { "NeogitHunkHeaderHighlight", { bg = p.gray_two } },
+
+  { "NeogitDiffContext", { fg = p.white_one, bg = p.bg } },
+  { "NeogitDiffContextHighlight", { fg = p.fg, bg = p.black_two } },
+  { "NeogitDiffDelete", { fg = p.bad, bg = p.bad_bg } },
+  { "NeogitDiffDeleteHighlight", { link = "NeogitDiffDelete" } },
+  { "NeogitDiffAdd", { fg = p.good, bg = p.good_bg } },
+  { "NeogitDiffAddHighlight", { link = "NeogitDiffAdd" } },
+  { "NeogitDiffAddRegion", { bg = p.gray_one } },
 }
 
 return M
