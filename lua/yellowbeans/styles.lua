@@ -243,12 +243,15 @@ M.hl_groups = {
   { "NeogitRemote", { fg = p.olive_green, bold = true } },
 
   { "NeogitSectionHeader", { fg = p.gold_yellow, bold = true } },
+  { "NeogitPopupSectionTitle", { link = "NeogitSectionHeader" } },
+  { "NeogitDiffAdd", { fg = p.good, bg = p.good_bg } },
+  { "NeogitUnmergedInto", { link = "NeogitSectionHeader" } },
   { "NeogitChangeModified", { fg = p.moss_green } },
   { "NeogitHunkHeader", { fg = p.white_one, bg = p.gray_one } },
   { "NeogitHunkHeaderHighlight", { bg = p.gray_two } },
 
   { "NeogitDiffContext", { fg = p.white_one, bg = p.bg } },
-  { "NeogitDiffContextHighlight", { fg = p.fg, bg = p.black_two } },
+  { "NeogitDiffContextHighlight", { bg = p.black_two } },
   { "NeogitDiffDelete", { fg = p.bad, bg = p.bad_bg } },
   { "NeogitDiffDeleteHighlight", { link = "NeogitDiffDelete" } },
   { "NeogitDiffAdd", { fg = p.good, bg = p.good_bg } },
