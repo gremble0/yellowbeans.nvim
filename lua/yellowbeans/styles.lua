@@ -13,7 +13,8 @@ M.palette = {
 
   black_one = "#101010",
   black_two = "#191919",
-  black_three = "#282828",
+  black_three = "#202020",
+  black_four = "#282828",
   white_one = "#aaaaaa",
   gray_one = "#333333",
   gray_two = "#606060",
@@ -67,7 +68,7 @@ M.hl_groups = {
   { "ColorColumn", { bg = p.black_two } },
   { "CursorColumn", { link = "ColorColumn" } },
   { "CursorLine", { link = "ColorColumn" } },
-  { "VertSplit", { fg = p.black_three } },
+  { "VertSplit", { fg = p.black_four } },
 
   { "StatusLine", { link = "ColorColumn" } },
   { "StatusLineNC", { fg = p.white_one, bg = p.black_two } },
@@ -226,7 +227,7 @@ M.hl_groups = {
   { "CmpItemKindValue", { link = "CmpItemKindFunction" } },
 
   -- Indent-blankline
-  { "IndentBlanklineChar", { fg = p.black_three, nocombine = true } },
+  { "IndentBlanklineChar", { fg = p.black_four, nocombine = true } },
 
   -- Nvimtree
   { "NvimTreeWindowPicker", { fg = p.gold_yellow, bg = p.black_two } },
@@ -239,14 +240,15 @@ M.hl_groups = {
   -- Neogit
   { "NeogitCursorLine", { link = "ColorColumn" } },
 
-  { "NeogitBranch", { fg = p.gold_yellow, bold = true } },
+  { "NeogitBranch", { fg = p.moss_green, bold = true } },
   { "NeogitRemote", { fg = p.olive_green, bold = true } },
 
   { "NeogitSectionHeader", { fg = p.gold_yellow, bold = true } },
   { "NeogitPopupSectionTitle", { link = "NeogitSectionHeader" } },
   { "NeogitDiffAdd", { fg = p.good, bg = p.good_bg } },
   { "NeogitUnmergedInto", { link = "NeogitSectionHeader" } },
-  { "NeogitChangeModified", { fg = p.moss_green } },
+  { "NeogitChangeModified", { fg = p.gold_yellow } },
+  { "NeogitChangeAdded", { fg = p.gold_yellow } },
   { "NeogitHunkHeader", { fg = p.white_one, bg = p.gray_one } },
   { "NeogitHunkHeaderHighlight", { bg = p.gray_two } },
 
