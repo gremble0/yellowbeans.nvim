@@ -29,10 +29,10 @@ M.palette = {
   purple_one = "#b6a6ff",
   wewak_pink = "#f0a0c0",
 
-  bad = "#d22b2b",
-  bad_bg = "#543232",
+  bad = "#f22b2b",
+  bad_bg = "#503030",
   neutral = "#ffa500",
-  good = "#60a840",
+  good = "#b3e27c",
   good_bg = "#2e3127",
 }
 
@@ -245,10 +245,13 @@ M.hl_groups = {
 
   { "NeogitSectionHeader", { fg = p.gold_yellow, bold = true } },
   { "NeogitPopupSectionTitle", { link = "NeogitSectionHeader" } },
-  { "NeogitDiffAdd", { fg = p.good, bg = p.good_bg } },
+  { "NeogitPopupOptionKey", { fg = p.moss_green } },
   { "NeogitUnmergedInto", { link = "NeogitSectionHeader" } },
-  { "NeogitChangeModified", { fg = p.gold_yellow } },
-  { "NeogitChangeAdded", { fg = p.gold_yellow } },
+
+  { "NeogitChangeModified", { fg = p.neutral } },
+  { "NeogitChangeAdded", { fg = p.good } },
+  { "NeogitChangeRemoved", { fg = p.bad } },
+
   { "NeogitHunkHeader", { fg = p.white_one, bg = p.gray_one } },
   { "NeogitHunkHeaderHighlight", { bg = p.gray_two } },
 
