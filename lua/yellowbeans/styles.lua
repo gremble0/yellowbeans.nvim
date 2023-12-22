@@ -32,6 +32,7 @@ M.palette = {
   bad = "#f22b2b",
   bad_bg = "#503030",
   neutral = "#ffa500",
+  neutral_bg = "#6B572A",
   good = "#b3e27c",
   good_bg = "#2e3127",
 }
@@ -78,6 +79,9 @@ M.hl_groups = {
   -- Diff mode
   { "Folded", { link = "Comment" } },
   { "FoldColumn", { link = "Folded" } },
+  { "DiffAdd", { bg = p.good_bg } },
+  { "DiffChange", { bg = p.neutral_bg } },
+  { "DiffDelete", { bg = p.bad_bg } },
 
   -- Tabline
   { "TabLineSel", { fg = p.gold_yellow, bold = true } },
@@ -108,12 +112,6 @@ M.hl_groups = {
 
   { "Search", { fg = p.bg, bg = p.gold_yellow } },
   { "IncSearch", { link = "Search" } },
-
-  -- Diff mode highlight groups (used as links as well },
-  { "DiffAdd", { fg = p.good } },
-  { "DiffChange", { fg = p.neutral } },
-  { "DiffDelete", { fg = p.bad } },
-  { "DiffText", { italic = true } },
 
   -- Bad things
   { "Error", { fg = p.bad } },
@@ -257,9 +255,9 @@ M.hl_groups = {
 
   { "NeogitDiffContext", { fg = p.white_one, bg = p.bg } },
   { "NeogitDiffContextHighlight", { bg = p.black_two } },
-  { "NeogitDiffDelete", { fg = p.bad, bg = p.bad_bg } },
+  { "NeogitDiffDelete", { fg = p.bad } },
   { "NeogitDiffDeleteHighlight", { link = "NeogitDiffDelete" } },
-  { "NeogitDiffAdd", { fg = p.good, bg = p.good_bg } },
+  { "NeogitDiffAdd", { bg = p.good_bg } },
   { "NeogitDiffAddHighlight", { link = "NeogitDiffAdd" } },
   { "NeogitDiffAddRegion", { bg = p.gray_one } },
 }
