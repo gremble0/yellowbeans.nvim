@@ -80,7 +80,6 @@ M.hl_groups = {
   { "Folded", { link = "Comment" } },
   { "FoldColumn", { link = "Folded" } },
   { "DiffAdd", { bg = p.good_bg } },
-  { "DiffChange", { bg = p.neutral_bg } },
   { "DiffDelete", { bg = p.bad_bg } },
 
   -- Tabline
@@ -236,8 +235,6 @@ M.hl_groups = {
   { "netrwClassify", { link = "Directory" } },
 
   -- Neogit
-  { "NeogitCursorLine", { link = "ColorColumn" } },
-
   { "NeogitBranch", { fg = p.moss_green, bold = true } },
   { "NeogitRemote", { fg = p.olive_green, bold = true } },
 
@@ -252,14 +249,6 @@ M.hl_groups = {
 
   { "NeogitHunkHeader", { fg = p.white_one, bg = p.gray_one } },
   { "NeogitHunkHeaderHighlight", { bg = p.gray_two } },
-
-  { "NeogitDiffContext", { fg = p.white_one, bg = p.bg } },
-  { "NeogitDiffContextHighlight", { bg = p.black_two } },
-  { "NeogitDiffDelete", { fg = p.bad } },
-  { "NeogitDiffDeleteHighlight", { link = "NeogitDiffDelete" } },
-  { "NeogitDiffAdd", { bg = p.good_bg } },
-  { "NeogitDiffAddHighlight", { link = "NeogitDiffAdd" } },
-  { "NeogitDiffAddRegion", { bg = p.gray_one } },
 }
 
 return M
