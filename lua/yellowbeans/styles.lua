@@ -37,20 +37,6 @@ M.palette = {
   good_bg = "#2e3127",
 }
 
--- Table of tables containing special symbols used as a border with the
--- corresponding highlight group used for this symbol. This format works for
--- lspconfig.ui.windows
-M.border = {
-  { "┌", "VertSplit" },
-  { "─", "VertSplit" },
-  { "┐", "VertSplit" },
-  { "│", "VertSplit" },
-  { "┘", "VertSplit" },
-  { "─", "VertSplit" },
-  { "└", "VertSplit" },
-  { "│", "VertSplit" }
-}
-
 -- Defined abbrevation for ease of typing
 local p = M.palette
 
