@@ -138,6 +138,13 @@ M.hl_groups = {
 
   ["Delimiter"] = { fg = p.hoki_blue },
 
+  -- Diagnostics
+  ["DiagnosticUnderlineWarn"] = { undercurl = true },
+  ["DiagnosticUnderlineError"] = { undercurl = true },
+  ["DiagnosticUnderlineInfo"] = { undercurl = true },
+  ["DiagnosticUnderlineHint"] = { undercurl = true },
+  ["DiagnosticUnderlineOk"] = { undercurl = true },
+
   --[[ Plugin settings ]]
   -- GitSigns
   ["GitSignsAdd"] = { fg = p.good },
