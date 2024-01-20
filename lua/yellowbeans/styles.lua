@@ -1,8 +1,7 @@
 --[[
 This file defines styles that can be `require()`d by other programs also 
-outside of the theme itself. For example you could use the M.border field
-so in plugins that use floating windows
---]]
+outside of the theme itself.
+]]
 
 local M = {}
 
@@ -169,7 +168,7 @@ M.hl_groups = {
   { "TelescopePromptCounter", { link = "Comment" } },
   { "TelescopePreviewTitle", { link = "TelescopePromptTitle" } },
   { "TelescopeResultsTitle", { link = "TelescopePromptTitle" } },
-  { "TelescopeSelection", { fg = p.gold_yellow } },
+  { "TelescopeSelection", { fg = p.bg, bg = p.gold_yellow } },
 
   -- Nvim-cmp
   { "CmpItemAbbrDeprecated", { fg = p.gray_two, bg = "NONE", strikethrough = true } },

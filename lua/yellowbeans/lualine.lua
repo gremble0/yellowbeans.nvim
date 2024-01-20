@@ -1,3 +1,7 @@
+--[[
+Applies palette defined in yellowbeans.styles to a format recognized by lualine.
+]]
+
 local p = require("yellowbeans.styles").palette
 
 return {
