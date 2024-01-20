@@ -41,199 +41,200 @@ local p = M.palette
 
 M.hl_groups = {
   -- Main highlight groups
-  { "Normal", { fg = p.fg, bg = p.bg } },
-  { "Conceal", { link = "Normal" } },
-  { "NonText", { fg = p.fg } },
+  ["Normal"] = { fg = p.fg, bg = p.bg },
+  ["Conceal"] = { link = "Normal" },
+  ["NonText"] = { fg = p.fg },
 
-  { "Cursor", { fg = p.bg, bg = p.fg } },
-  { "TermCursor", { link = "Cursor" } },
+  ["Cursor"] = { fg = p.bg, bg = p.fg },
+  ["TermCursor"] = { link = "Cursor" },
 
   -- Background things
-  { "SignColumn", { fg = p.fg, bg = p.bg } },
+  ["SignColumn"] = { fg = p.fg, bg = p.bg },
 
-  { "ColorColumn", { bg = p.black_two } },
-  { "CursorColumn", { link = "ColorColumn" } },
-  { "CursorLine", { link = "ColorColumn" } },
-  { "VertSplit", { fg = p.black_four } },
+  ["ColorColumn"] = { bg = p.black_two },
+  ["CursorColumn"] = { link = "ColorColumn" },
+  ["CursorLine"] = { link = "ColorColumn" },
+  ["VertSplit"] = { fg = p.black_four },
 
-  { "StatusLine", { link = "ColorColumn" } },
-  { "StatusLineNC", { fg = p.white_one, bg = p.black_two } },
+  ["StatusLine"] = { link = "ColorColumn" },
+  ["StatusLineNC"] = { fg = p.white_one, bg = p.black_two },
 
-  { "Visual", { bg = p.gray_one } },
+  ["Visual"] = { bg = p.gray_one },
 
   -- Diff mode
-  { "Folded", { link = "Comment" } },
-  { "FoldColumn", { link = "Folded" } },
-  { "DiffAdd", { bg = p.good_bg } },
-  { "DiffDelete", { bg = p.bad_bg } },
+  ["Folded"] = { link = "Comment" },
+  ["FoldColumn"] = { link = "Folded" },
+  ["DiffAdd"] = { bg = p.good_bg },
+  ["DiffDelete"] = { bg = p.bad_bg },
 
   -- Tabline
-  { "TabLineSel", { fg = p.gold_yellow, bold = true } },
-  { "Tabline", { bg = p.gray_one } },
-  { "TablineFill", { bg = p.bg } },
+  ["TabLineSel"] = { fg = p.gold_yellow, bold = true },
+  ["Tabline"] = { bg = p.gray_one },
+  ["TablineFill"] = { bg = p.bg },
 
   -- Text
-  { "Comment", { fg = p.gray_two } },
-  { "LineNr", { link = "Comment" } },
-  { "Special", { fg = p.shipcove_blue } },
-  { "SpecialKey", { link = "Comment" } },
-  { "CursorLineNr", { link = "Normal" } },
-  { "MatchParen", { fg = p.gold_yellow } },
-  { "Title", { fg = p.good } },
+  ["Comment"] = { fg = p.gray_two },
+  ["LineNr"] = { link = "Comment" },
+  ["Special"] = { fg = p.shipcove_blue },
+  ["SpecialKey"] = { link = "Comment" },
+  ["CursorLineNr"] = { link = "Normal" },
+  ["MatchParen"] = { fg = p.gold_yellow },
+  ["Title"] = { fg = p.good },
 
-  { "Bold", { bold = true } },
-  { "Italic", { italic = true } },
-  { "Underlined", { underline = true } },
+  ["Bold"] = { bold = true },
+  ["Italic"] = { italic = true },
+  ["Underlined"] = { underline = true },
 
-  { "Todo", { fg = p.olive_green } },
+  ["Todo"] = { fg = p.olive_green },
 
   -- Menus
-  { "Pmenu", { fg = p.fg, bg = p.bg } },
-  { "PmenuBg", { link = "VertSplit" } },
-  { "PmenuSel", { fg = p.bg, bg = p.gold_yellow } },
-  { "PmenuSbar", { fg = p.gold_yellow, bg = p.bg } },
-  { "PmenuThumb", { fg = p.gray_one, bg = p.gray_one } },
+  ["Pmenu"] = { fg = p.fg, bg = p.bg },
+  ["PmenuBg"] = { link = "VertSplit" },
+  ["PmenuSel"] = { fg = p.bg, bg = p.gold_yellow },
+  ["PmenuSbar"] = { fg = p.gold_yellow, bg = p.bg },
+  ["PmenuThumb"] = { fg = p.gray_one, bg = p.gray_one },
 
-  { "Search", { fg = p.bg, bg = p.gold_yellow } },
-  { "IncSearch", { link = "Search" } },
+  ["Search"] = { fg = p.bg, bg = p.gold_yellow },
+  ["IncSearch"] = { link = "Search" },
 
   -- Bad things
-  { "Error", { fg = p.bad } },
-  { "ErrorMsg", { link = "Error" } },
+  ["Error"] = { fg = p.bad },
+  ["ErrorMsg"] = { link = "Error" },
 
   -- Other
-  { "Directory", { fg = p.shipcove_blue } },
+  ["Directory"] = { fg = p.shipcove_blue },
 
-  -- Preferred groups for syntax highlighting (other groups also refer to these },
-  { "Constant", { fg = p.moss_green } },
-  { "Character", { link = "Constant" } },
-  { "Number", { link = "Constant" } },
-  { "Boolean", { link = "Constant" } },
-  { "Float", { link = "Constant" } },
+  -- Preferred groups for syntax highlighting (other groups also refer to these,
+  ["Constant"] = { fg = p.moss_green },
+  ["Character"] = { link = "Constant" },
+  ["Number"] = { link = "Constant" },
+  ["Boolean"] = { link = "Constant" },
+  ["Float"] = { link = "Constant" },
 
-  { "String", { fg = p.olive_green } },
-  { "StringDelimiter", { link = "String" } },
+  ["String"] = { fg = p.olive_green },
+  ["StringDelimiter"] = { link = "String" },
 
-  { "Identifier", { fg = p.purple_one } },
-  { "Typedef", { link = "Identifier" } },
+  ["Identifier"] = { fg = p.purple_one },
+  ["Typedef"] = { link = "Identifier" },
 
-  { "Function", { fg = p.perano_blue } },
+  ["Function"] = { fg = p.perano_blue },
 
-  { "Statement", { fg = p.gold_yellow, bold = true } },
-  { "Conditional", { link = "Statement" } },
-  { "Repeat", { link = "Statement" } },
-  { "Label", { link = "Statement" } },
-  { "Keyword", { link = "Statement" } },
-  { "Operator", { link = "Statement" } },
+  ["Statement"] = { fg = p.gold_yellow, bold = true },
+  ["Conditional"] = { link = "Statement" },
+  ["Repeat"] = { link = "Statement" },
+  ["Label"] = { link = "Statement" },
+  ["Keyword"] = { link = "Statement" },
+  ["Operator"] = { link = "Statement" },
 
-  { "PreProc", { fg = p.moss_green } },
-  { "Include", { link = "PreProc" } },
-  { "Macro", { link = "PreProc" } },
-  { "PreCondit", { link = "PreProc" } },
+  ["PreProc"] = { fg = p.moss_green },
+  ["Include"] = { link = "PreProc" },
+  ["Macro"] = { link = "PreProc" },
+  ["PreCondit"] = { link = "PreProc" },
 
-  { "Type", { fg = p.gold_yellow } },
-  { "StorageClass", { link = "Type" } },
+  ["Type"] = { fg = p.gold_yellow },
+  ["StorageClass"] = { link = "Type" },
 
-  { "Structure", { fg = p.shipcove_blue } },
+  ["Structure"] = { fg = p.shipcove_blue },
 
-  { "Delimiter", { fg = p.hoki_blue } },
+  ["Delimiter"] = { fg = p.hoki_blue },
 
   --[[ Plugin settings ]]
   -- GitSigns
-  { "GitSignsAdd", { fg = p.good } },
-  { "GitSignsChange", { fg = p.neutral } },
-  { "GitSignsDelete", { fg = p.bad } },
+  ["GitSignsAdd"] = { fg = p.good },
+  ["GitSignsChange"] = { fg = p.neutral },
+  ["GitSignsDelete"] = { fg = p.bad },
 
   -- Fidget
-  { "FidgetTask", { link = "Comment" } },
-  { "FidgetTitle", { fg = p.gold_yellow } },
+  ["FidgetTask"] = { link = "Comment" },
+  ["FidgetTitle"] = { fg = p.gold_yellow },
 
   -- Treesitter
-  { "TSNamespace", { fg = p.wewak_pink } },
-  { "TSDelimiter", { fg = p.hoki_blue } },
+  ["TSNamespace"] = { fg = p.wewak_pink },
+  ["TSDelimiter"] = { fg = p.hoki_blue },
 
-  { "TSStringRegex", { fg = p.moss_green } },
-  { "TSStringEscape", { fg = p.moss_green } },
+  ["TSStringRegex"] = { fg = p.moss_green },
+  ["TSStringEscape"] = { fg = p.moss_green },
 
-  { "TSURI", { fg = p.morningglory_blue, underline = true } },
-  { "TSEmphasis", { italic = true } },
-  { "TSUnderline", { underline = true } },
-  { "TSStrike", { strikethrough = true } },
+  ["TSURI"] = { fg = p.morningglory_blue, underline = true },
+  ["TSEmphasis"] = { italic = true },
+  ["TSUnderline"] = { underline = true },
+  ["TSStrike"] = { strikethrough = true },
 
-  { "TSError", { link = "Error" } },
+  ["TSError"] = { link = "Error" },
 
   -- Telescope
-  { "TelescopeBorder", { link = "VertSplit" } },
-  { "TelescopePromptTitle", { fg = p.fg } },
-  { "TelescopePromptCounter", { link = "Comment" } },
-  { "TelescopePreviewTitle", { link = "TelescopePromptTitle" } },
-  { "TelescopeResultsTitle", { link = "TelescopePromptTitle" } },
-  { "TelescopeSelection", { fg = p.bg, bg = p.gold_yellow } },
+  ["TelescopeBorder"] = { link = "VertSplit" },
+  ["TelescopePromptTitle"] = { fg = p.fg },
+  ["TelescopePromptCounter"] = { link = "Comment" },
+  ["TelescopePreviewTitle"] = { link = "TelescopePromptTitle" },
+  ["TelescopeResultsTitle"] = { link = "TelescopePromptTitle" },
+  ["TelescopeMatching"] = { bold = true, fg = p.shipcove_blue },
+  ["TelescopeSelection"] = { fg = p.bg, bg = p.gold_yellow },
 
   -- Nvim-cmp
-  { "CmpItemAbbrDeprecated", { fg = p.gray_two, bg = "NONE", strikethrough = true } },
-  { "CmpItemAbbrMatch", { fg = p.gold_yellow, bg = "NONE", bold = true } },
-  { "CmpItemAbbrMatchFuzzy", { fg = p.gold_yellow, bg = "NONE", bold = true } },
+  ["CmpItemAbbrDeprecated"] = { fg = p.gray_two, bg = "NONE", strikethrough = true },
+  ["CmpItemAbbrMatch"] = { fg = p.shipcove_blue, bg = "NONE", bold = true },
+  ["CmpItemAbbrMatchFuzzy"] = { fg = p.shipcove_blue, bg = "NONE", bold = true },
 
-  { "CmpItemKindVariable", { link = "Identifier" } },
-  { "CmpItemKindField", { link = "CmpItemKindVariable" } },
-  { "CmpItemKindProperty", { link = "CmpItemKindVariable" } },
-  { "CmpItemKindEvent", { link = "CmpItemKindVariable" } },
+  ["CmpItemKindVariable"] = { link = "Identifier" },
+  ["CmpItemKindField"] = { link = "CmpItemKindVariable" },
+  ["CmpItemKindProperty"] = { link = "CmpItemKindVariable" },
+  ["CmpItemKindEvent"] = { link = "CmpItemKindVariable" },
 
-  { "CmpItemKindKeyword", { link = "Keyword" } },
-  { "CmpItemKindText", { link = "CmpItemKindText" } },
-  { "CmpItemKindEnum", { link = "CmpItemKindText" } },
+  ["CmpItemKindKeyword"] = { link = "Keyword" },
+  ["CmpItemKindText"] = { link = "CmpItemKindText" },
+  ["CmpItemKindEnum"] = { link = "CmpItemKindText" },
 
-  { "CmpItemKindConstant", { link = "Constant" } },
-  { "CmpItemKindConstructor", { link = "CmpItemKindConstant" } },
-  { "CmpItemKindReference", { link = "CmpItemKindConstant" } },
-  { "CmpItemKindEnumMember", { link = "CmpItemKindConstant" } },
+  ["CmpItemKindConstant"] = { link = "Constant" },
+  ["CmpItemKindConstructor"] = { link = "CmpItemKindConstant" },
+  ["CmpItemKindReference"] = { link = "CmpItemKindConstant" },
+  ["CmpItemKindEnumMember"] = { link = "CmpItemKindConstant" },
 
-  { "CmpItemKindStruct", { link = "Structure" } },
-  { "CmpItemKindClass", { link = "CmpItemKindStruct" } },
-  { "CmpItemKindModule", { link = "CmpItemKindStruct" } },
-  { "CmpItemKindInterface", { link = "CmpItemKindStruct" } },
-  { "CmpItemKindColor", { link = "CmpItemKindStruct" } },
+  ["CmpItemKindStruct"] = { link = "Structure" },
+  ["CmpItemKindClass"] = { link = "CmpItemKindStruct" },
+  ["CmpItemKindModule"] = { link = "CmpItemKindStruct" },
+  ["CmpItemKindInterface"] = { link = "CmpItemKindStruct" },
+  ["CmpItemKindColor"] = { link = "CmpItemKindStruct" },
 
-  { "CmpItemKindOperator", { link = "Operator" } },
+  ["CmpItemKindOperator"] = { link = "Operator" },
 
-  { "CmpItemKindUnit", { link = "String" } },
-  { "CmpItemKindSnippet", { link = "CmpItemKindUnit" } },
+  ["CmpItemKindUnit"] = { link = "String" },
+  ["CmpItemKindSnippet"] = { link = "CmpItemKindUnit" },
 
-  { "CmpItemKindFolder", { link = "Directory" } },
-  { "CmpItemKindFile", { link = "CmpItemKindFolder" } },
+  ["CmpItemKindFolder"] = { link = "Directory" },
+  ["CmpItemKindFile"] = { link = "CmpItemKindFolder" },
 
-  { "CmpItemKindFunction", { link = "Function" } },
-  { "CmpItemKindTypeParameter", { link = "CmpItemKindFunction" } },
-  { "CmpItemKindMethod", { link = "CmpItemKindFunction" } },
-  { "CmpItemKindValue", { link = "CmpItemKindFunction" } },
+  ["CmpItemKindFunction"] = { link = "Function" },
+  ["CmpItemKindTypeParameter"] = { link = "CmpItemKindFunction" },
+  ["CmpItemKindMethod"] = { link = "CmpItemKindFunction" },
+  ["CmpItemKindValue"] = { link = "CmpItemKindFunction" },
 
   -- Indent-blankline
-  { "IndentBlanklineChar", { fg = p.black_four, nocombine = true } },
+  ["IndentBlanklineChar"] = { fg = p.black_four, nocombine = true },
 
   -- Nvimtree
-  { "NvimTreeWindowPicker", { fg = p.gold_yellow, bg = p.black_two } },
-  { "NvimTreeWinSeparator", { fg = p.black_one, bg = p.black_one } },
-  { "NvimTreeNormal", { bg = p.black_one } },
+  ["NvimTreeWindowPicker"] = { fg = p.gold_yellow, bg = p.black_two },
+  ["NvimTreeWinSeparator"] = { fg = p.black_one, bg = p.black_one },
+  ["NvimTreeNormal"] = { bg = p.black_one },
 
   -- Netrw
-  { "netrwClassify", { link = "Directory" } },
+  ["netrwClassify"] = { link = "Directory" },
 
   -- Neogit
-  { "NeogitBranch", { fg = p.moss_green, bold = true } },
-  { "NeogitRemote", { fg = p.olive_green, bold = true } },
+  ["NeogitBranch"] = { fg = p.moss_green, bold = true },
+  ["NeogitRemote"] = { fg = p.olive_green, bold = true },
 
-  { "NeogitSectionHeader", { fg = p.gold_yellow, bold = true } },
-  { "NeogitPopupSectionTitle", { link = "NeogitSectionHeader" } },
-  { "NeogitPopupOptionKey", { fg = p.moss_green } },
-  { "NeogitUnmergedInto", { link = "NeogitSectionHeader" } },
+  ["NeogitSectionHeader"] = { fg = p.gold_yellow, bold = true },
+  ["NeogitPopupSectionTitle"] = { link = "NeogitSectionHeader" },
+  ["NeogitPopupOptionKey"] = { fg = p.moss_green },
+  ["NeogitUnmergedInto"] = { link = "NeogitSectionHeader" },
 
-  { "NeogitChangeModified", { fg = p.neutral } },
-  { "NeogitChangeAdded", { fg = p.good } },
-  { "NeogitChangeRemoved", { fg = p.bad } },
+  ["NeogitChangeModified"] = { fg = p.neutral },
+  ["NeogitChangeAdded"] = { fg = p.good },
+  ["NeogitChangeRemoved"] = { fg = p.bad },
 
-  { "NeogitHunkHeader", { fg = p.white_one, bg = p.gray_one } },
-  { "NeogitHunkHeaderHighlight", { bg = p.gray_two } },
+  ["NeogitHunkHeader"] = { fg = p.white_one, bg = p.gray_one },
+  ["NeogitHunkHeaderHighlight"] = { bg = p.gray_two },
 }
 
 return M
