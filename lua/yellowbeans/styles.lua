@@ -79,7 +79,7 @@ M.hl_groups = {
   ["SpecialKey"] = { link = "Comment" },
   ["CursorLineNr"] = { link = "Normal" },
   ["MatchParen"] = { fg = p.gold_yellow },
-  ["Title"] = { fg = p.good },
+  ["Title"] = { fg = p.shipcove_blue },
 
   ["Bold"] = { bold = true },
   ["Italic"] = { italic = true },
@@ -137,6 +137,9 @@ M.hl_groups = {
   ["Structure"] = { fg = p.shipcove_blue },
 
   ["Delimiter"] = { fg = p.hoki_blue },
+
+  -- LspInfo
+  ["LspInfoBorder"] = { link = "VertSplit" },
 
   -- Diagnostics
   ["DiagnosticUnderlineWarn"] = { undercurl = true },
