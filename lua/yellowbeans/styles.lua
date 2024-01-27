@@ -92,9 +92,9 @@ M.hl_groups = {
   ["PmenuBg"] = { link = "VertSplit" },
   ["PmenuSel"] = { fg = p.bg, bg = p.gold_yellow },
   ["PmenuSbar"] = { fg = p.gold_yellow, bg = p.bg },
-  ["PmenuThumb"] = { fg = p.gray_one, bg = p.gray_one },
+  ["PmenuThumb"] = { bg = p.gray_two },
 
-  ["Search"] = { fg = p.bg, bg = p.gold_yellow },
+  ["Search"] = { bg = p.gray_one },
   ["IncSearch"] = { link = "Search" },
 
   -- Bad things
@@ -179,7 +179,7 @@ M.hl_groups = {
   ["TelescopePreviewTitle"] = { link = "TelescopePromptTitle" },
   ["TelescopeResultsTitle"] = { link = "TelescopePromptTitle" },
   ["TelescopeMatching"] = { bold = true, fg = p.shipcove_blue },
-  ["TelescopeSelection"] = { fg = p.bg, bg = p.gold_yellow },
+  ["TelescopeSelection"] = { bg = p.gray_one },
 
   -- Nvim-cmp
   ["CmpItemAbbrDeprecated"] = { fg = p.gray_two, bg = "NONE", strikethrough = true },
