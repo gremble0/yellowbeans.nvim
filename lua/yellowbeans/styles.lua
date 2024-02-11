@@ -142,6 +142,9 @@ M.hl_groups = {
   ["LspInfoBorder"] = { link = "VertSplit" },
 
   -- Diagnostics
+  ["DiagnosticError"] = { fg = p.bad },
+  ["DiagnosticWarn"] = { fg = p.neutral },
+  ["DiagnosticInfo"] = { fg = p.perano_blue },
   ["DiagnosticUnderlineWarn"] = { undercurl = true },
   ["DiagnosticUnderlineError"] = { undercurl = true },
   ["DiagnosticUnderlineInfo"] = { undercurl = true },
@@ -245,6 +248,36 @@ M.hl_groups = {
 
   ["NeogitHunkHeader"] = { fg = p.white_one, bg = p.gray_one },
   ["NeogitHunkHeaderHighlight"] = { bg = p.gray_two },
+
+  -- Vim fugitive
+  ["diffRemoved"] = { fg = p.bad },
+  ["diffAdded"] = { fg = p.good },
+  ["diffSubname"] = { fg = p.shipcove_blue },
+
+  -- nvim-notify
+  ["NotifyERRORTitle"] = { fg = p.bad },
+  ["NotifyWARNTitle"] = { fg = p.neutral },
+  ["NotifyINFOTitle"] = { fg = p.good },
+  ["NotifyDEBUGTitle"] = { fg = p.neutral },
+  ["NotifyTRACETitle"] = { fg = p.wewak_pink },
+
+  ["NotifyERRORBorder"] = { link = "VertSplit" },
+  ["NotifyWARNBorder"] = { link = "VertSplit" },
+  ["NotifyINFOBorder"] = { link = "VertSplit" },
+  ["NotifyDEBUGBorder"] = { link = "VertSplit" },
+  ["NotifyTRACEBorder"] = { link = "VertSplit" },
+
+  ["NotifyERRORIcon"] = { link = "NotifyERRORTitle" },
+  ["NotifyWARNIcon"] = { link = "NotifyWARNTitle" },
+  ["NotifyINFOIcon"] = { link = "NotifyINFOTitle" },
+  ["NotifyDEBUGIcon"] = { link = "NotifyDEBUGTitle" },
+  ["NotifyTRACEIcon"] = { link = "NotifyTRACETitle" },
+
+  ["NotifyERRORBody"] = { link = "Normal" },
+  ["NotifyWARNBody"] = { link = "Normal" },
+  ["NotifyINFOBody"] = { link = "Normal" },
+  ["NotifyDEBUGBody"] = { link = "Normal" },
+  ["NotifyTRACEBody"] = { link = "Normal" },
 }
 
 return M
