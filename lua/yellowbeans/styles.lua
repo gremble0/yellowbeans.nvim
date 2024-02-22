@@ -43,7 +43,7 @@ M.hl_groups = {
   -- Main highlight groups
   ["Normal"] = { fg = p.fg, bg = p.bg },
   ["Conceal"] = { link = "Normal" },
-  ["NonText"] = { fg = p.fg },
+  ["NonText"] = { fg = p.gray_two },
 
   ["Cursor"] = { fg = p.bg, bg = p.fg },
   ["TermCursor"] = { link = "Cursor" },
