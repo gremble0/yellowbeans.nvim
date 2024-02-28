@@ -37,12 +37,12 @@ M.hl_groups = {
   ["TablineFill"] = { bg = p.bg },
 
   -- Text
-  ["Comment"] = { fg = p.gray_two },
+  ["Comment"] = { fg = p.gray_two, italic = true },
   ["LineNr"] = { link = "Comment" },
   ["Special"] = { fg = p.shipcove_blue },
   ["SpecialKey"] = { link = "Comment" },
   ["CursorLineNr"] = { link = "Normal" },
-  ["MatchParen"] = { fg = p.gold_yellow },
+  ["MatchParen"] = { fg = p.gold_yellow, bold = true },
   ["Title"] = { fg = p.shipcove_blue },
 
   ["Bold"] = { bold = true },
@@ -95,12 +95,23 @@ M.hl_groups = {
   ["Macro"] = { link = "PreProc" },
   ["PreCondit"] = { link = "PreProc" },
 
-  ["Type"] = { fg = p.gold_yellow },
+  ["Type"] = { fg = p.shipcove_blue },
   ["StorageClass"] = { link = "Type" },
-
-  ["Structure"] = { fg = p.shipcove_blue },
+  ["Structure"] = { fg = p.some_blue },
 
   ["Delimiter"] = { fg = p.hoki_blue },
+
+  -- Other syntax highlighting groups
+  ["@variable.builtin"] = { link = "Statement" },
+
+  ["@lsp.type.keyword"] = { link = "Statement" },
+
+  ["@type.qualifier"] = { link = "Statement" },
+
+  ["@property"] = { fg = p.dove_blue },
+  ["@lsp.type.property"] = { link = "@property" },
+
+  ["@string.documentation"] = { link = "Comment" },
 
   -- LspInfo
   ["LspInfoBorder"] = { link = "VertSplit" },
@@ -127,7 +138,7 @@ M.hl_groups = {
 
   -- Treesitter
   ["TSNamespace"] = { fg = p.wewak_pink },
-  ["TSDelimiter"] = { fg = p.hoki_blue },
+  ["TSDelimiter"] = { link = "Delimiter" },
 
   ["TSStringRegex"] = { fg = p.moss_green },
   ["TSStringEscape"] = { fg = p.moss_green },
