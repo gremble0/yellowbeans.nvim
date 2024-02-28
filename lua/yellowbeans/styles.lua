@@ -1,43 +1,7 @@
---[[
-This file defines styles that can be `require()`d by other programs also 
-outside of the theme itself.
-]]
-
 local M = {}
 
--- Colorcodes to be used for highlight groups
-M.palette = {
-  bg = "#151515",
-  fg = "#cccccc",
-
-  black_one = "#101010",
-  black_two = "#191919",
-  black_three = "#202020",
-  black_four = "#282828",
-  white_one = "#aaaaaa",
-  gray_one = "#333333",
-  gray_two = "#606060",
-
-  gold_yellow = "#e1b655",
-  olive_green = "#9aae6b",
-  moss_green = "#7c9081",
-  morningglory_blue = "#8fbfdc",
-  shipcove_blue = "#8197bf",
-  perano_blue = "#b0d0f0",
-  hoki_blue = "#668799",
-  purple_one = "#b6a6ff",
-  wewak_pink = "#f0a0c0",
-
-  bad = "#f22b2b",
-  bad_bg = "#503030",
-  neutral = "#ffa500",
-  neutral_bg = "#6B572A",
-  good = "#b3e27c",
-  good_bg = "#2e3127",
-}
-
 -- Defined abbrevation for ease of typing
-local p = M.palette
+local p = require("yellowbeans.palette")
 
 M.hl_groups = {
   -- Main highlight groups

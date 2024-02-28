@@ -2,7 +2,7 @@
 Applies palette defined in yellowbeans.styles to a format recognized by lualine.
 ]]
 
-local p = require("yellowbeans.styles").palette
+local p = require("yellowbeans.palette")
 
 return {
   normal = {
@@ -11,13 +11,13 @@ return {
     c = { fg = p.white_one, bg = p.black_two },
   },
   insert = {
-    a = { fg = p.bg, bg = p.olive_green, gui = "bold" }
+    a = { fg = p.bg, bg = p.olive_green, gui = "bold" },
   },
   visual = {
-    a = { fg = p.bg, bg = p.shipcove_blue, gui = "bold" }
+    a = { fg = p.bg, bg = p.shipcove_blue, gui = "bold" },
   },
   replace = {
-    a = { fg = p.bg, bg = p.moss_green, gui = "bold" }
+    a = { fg = p.bg, bg = p.moss_green, gui = "bold" },
   },
   inactive = {
     a = { fg = p.fg, bg = p.black_four, gui = "bold" },
