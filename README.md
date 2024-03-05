@@ -3,7 +3,7 @@
 ![Telescope](https://github.com/gremble0/yellowbeans.nvim/assets/45577341/530cb1cb-4950-48c5-b96f-d64afc0d67b0)
 
 ## Description
-This is a dependencyless neovim theme similar to jellybeans but with some differences, including as the name suggests having yellow as the main theme contrast color. The theme is written in lua. The theme is intentionally made to only include highlight groups for the most essential parts of the ui which has the benefit of making it very lightweight. If there are any highlight groups you want added, feel free to pull request or contact me.
+This is a dependencyless neovim theme initially inspired by jellybeans, but which has become quite different. The theme is written in lua and includes highlight groups for many different nvim plugins such as: TreeSitter, Telescope, nvim-cmp, nvim-notify, and more.
 
 ## Installation
 Install it using your favorite nvim package manager, This is how to do it with [lazy](https://github.com/folke/lazy.nvim)

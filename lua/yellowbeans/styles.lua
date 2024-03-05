@@ -1,6 +1,5 @@
 local M = {}
 
--- Defined abbrevation for ease of typing
 local p = require("yellowbeans.palette")
 
 M.hl_groups = {
@@ -78,7 +77,7 @@ M.hl_groups = {
   ["String"] = { fg = p.olive_green },
   ["StringDelimiter"] = { link = "String" },
 
-  ["Identifier"] = { fg = p.purple_one },
+  ["Identifier"] = { fg = p.lavender_purple },
   ["Typedef"] = { link = "Identifier" },
 
   ["Function"] = { fg = p.perano_blue },
@@ -97,7 +96,7 @@ M.hl_groups = {
 
   ["Type"] = { fg = p.shipcove_blue },
   ["StorageClass"] = { link = "Type" },
-  ["Structure"] = { fg = p.some_blue },
+  ["Structure"] = { fg = p.sky_blue },
 
   ["Delimiter"] = { fg = p.hoki_blue },
 
@@ -253,6 +252,23 @@ M.hl_groups = {
   ["NotifyINFOBody"] = { link = "Normal" },
   ["NotifyDEBUGBody"] = { link = "Normal" },
   ["NotifyTRACEBody"] = { link = "Normal" },
+
+  -- Mason
+  ["MasonLink"] = { link = "Directory" },
+
+  ["MasonMuted"] = { fg = p.gray_two },
+  ["MasonMutedBlock"] = { bg = p.black_two },
+  ["MasonMutedBlockBold"] = { bg = p.black_two, bold = true },
+
+  ["MasonHeader"] = { fg = p.bg, bg = p.gold_yellow },
+  ["MasonHeaderSecondary"] = { link = "MasonHeader" },
+  ["MasonWarning"] = { fg = p.neutral },
+
+  ["MasonHighlight"] = { fg = p.hoki_blue },
+  ["MasonHighlightBlock"] = { bg = p.gray_one },
+  ["MasonHighlightBlockSecondary"] = { link = "MasonHighlightBlock" },
+  ["MasonHighlightBlockBold"] = { bg = p.gray_one, bold = true },
+  ["MasonHighlightBlockBoldSecondary"] = { link = "MasonHighlightBlockBold" },
 }
 
 return M
