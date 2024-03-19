@@ -31,9 +31,11 @@ M.hl_groups = {
   ["DiffDelete"] = { bg = p.bad_bg },
 
   -- Tabline
-  ["TabLineSel"] = { fg = p.gold_yellow, bold = true },
-  ["Tabline"] = { bg = p.gray_one },
-  ["TablineFill"] = { bg = p.bg },
+  ["TablineSel"] = { bg = p.bg, bold = true },
+  ["TablineSelSep"] = { fg = p.gold_yellow, bg = p.bg },
+  ["Tabline"] = { fg = p.gray_two, bg = p.bg },
+  ["TablineSep"] = { fg = p.black_four, bg = p.bg },
+  ["TablineFill"] = { bg = p.black_one },
 
   -- Text
   ["Comment"] = { fg = p.gray_two, italic = true },
