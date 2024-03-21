@@ -102,17 +102,12 @@ M.hl_groups = {
 
   ["Delimiter"] = { fg = p.hoki_blue },
 
-  -- Other syntax highlighting groups
-  ["@variable.builtin"] = { link = "Statement" },
-
+  -- LSP
   ["@lsp.type.keyword"] = { link = "Statement" },
 
   ["@type.qualifier"] = { link = "Statement" },
 
-  ["@property"] = { fg = p.dove_blue },
   ["@lsp.type.property"] = { link = "@property" },
-
-  ["@string.documentation"] = { link = "Comment" },
 
   -- LspInfo
   ["LspInfoBorder"] = { link = "VertSplit" },
@@ -138,18 +133,17 @@ M.hl_groups = {
   ["FidgetTitle"] = { fg = p.gold_yellow },
 
   -- Treesitter
-  ["TSNamespace"] = { fg = p.wewak_pink },
-  ["TSDelimiter"] = { link = "Delimiter" },
+  ["@property"] = { fg = p.dove_blue },
+  ["@variable.builtin"] = { link = "Statement" },
+  ["@string.documentation"] = { link = "Comment" },
 
-  ["TSStringRegex"] = { fg = p.moss_green },
-  ["TSStringEscape"] = { fg = p.moss_green },
-
-  ["TSURI"] = { fg = p.morningglory_blue, underline = true },
-  ["TSEmphasis"] = { italic = true },
-  ["TSUnderline"] = { underline = true },
-  ["TSStrike"] = { strikethrough = true },
-
-  ["TSError"] = { link = "Error" },
+  -- Markup
+  ["@markup.heading"] = { fg = p.gold_yellow, bold = true },
+  ["@markup.italic"] = { italic = true },
+  ["@markup.strong"] = { bold = true },
+  ["@markup.raw"] = { fg = p.shipcove_blue },
+  ["@markup.link"] = { fg = p.shipcove_blue },
+  ["@markup.link.label"] = { fg = p.olive_green },
 
   -- Telescope
   ["TelescopeBorder"] = { link = "VertSplit" },
