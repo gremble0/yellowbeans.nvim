@@ -2,6 +2,7 @@ local M = {}
 
 local p = require("yellowbeans.palette")
 
+-- TODO lazy load file/plugin specific hl groups?
 M.hl_groups = {
   -- Main highlight groups
   ["Normal"] = { fg = p.fg, bg = p.bg },
@@ -31,11 +32,9 @@ M.hl_groups = {
   ["DiffDelete"] = { bg = p.bad_bg },
 
   -- Tabline
-  ["TablineSel"] = { bg = p.bg, bold = true },
-  ["TablineSelSep"] = { fg = p.gold_yellow, bg = p.bg },
-  ["Tabline"] = { fg = p.gray_two, bg = p.bg },
-  ["TablineSep"] = { fg = p.black_four, bg = p.bg },
-  ["TablineFill"] = { bg = p.black_one },
+  ["TabLineSel"] = { bg = p.bg, bold = true },
+  ["TabLine"] = { fg = p.gray_two, bg = p.bg },
+  ["TabLineFill"] = { bg = p.black_one },
 
   -- Text
   ["Comment"] = { fg = p.gray_two, italic = true },
