@@ -20,8 +20,11 @@ M.hl_groups = {
   ["CursorLine"] = { link = "ColorColumn" },
   ["VertSplit"] = { fg = p.black_four },
 
-  ["StatusLine"] = { link = "ColorColumn" },
+  ["StatusLine"] = { fg = p.fg, bg = p.black_two },
   ["StatusLineNC"] = { fg = p.white_one, bg = p.black_two },
+
+  ["WinBar"] = { link = "StatusLine" },
+  ["WinbarNC"] = { link = "StatusLineNC" },
 
   ["Visual"] = { bg = p.gray_one },
 
@@ -83,12 +86,12 @@ M.hl_groups = {
 
   ["Function"] = { fg = p.perano_blue },
 
-  ["Statement"] = { fg = p.gold_yellow, bold = true },
-  ["Conditional"] = { link = "Statement" },
-  ["Repeat"] = { link = "Statement" },
-  ["Label"] = { link = "Statement" },
-  ["Keyword"] = { link = "Statement" },
-  ["Operator"] = { link = "Statement" },
+  ["Keyword"] = { fg = p.gold_yellow, bold = true },
+  ["Statement"] = { link = "Keyword" },
+  ["Conditional"] = { link = "Keyword" },
+  ["Repeat"] = { link = "Keyword" },
+  ["Label"] = { link = "Keyword" },
+  ["Operator"] = { link = "Keyword" },
 
   ["PreProc"] = { fg = p.moss_green },
   ["Include"] = { link = "PreProc" },
@@ -102,14 +105,26 @@ M.hl_groups = {
   ["Delimiter"] = { fg = p.hoki_blue },
 
   -- LSP
-  ["@lsp.type.keyword"] = { link = "Statement" },
-
-  ["@type.qualifier"] = { link = "Statement" },
-
-  ["@lsp.type.property"] = { link = "@property" },
+  ["@lsp.type.keyword"] = { link = "Keyword" },
+  ["@lsp.type.variable"] = { link = "None" },
+  ["@lsp.type.property"] = { link = "None" },
 
   -- LspInfo
   ["LspInfoBorder"] = { link = "VertSplit" },
+
+  -- Treesitter
+  ["@property"] = { fg = p.dove_blue },
+  ["@variable.builtin"] = { link = "Keyword" },
+  ["@variable.member"] = { link = "@property" },
+  ["@string.documentation"] = { link = "Comment" },
+
+  -- Markup
+  ["@markup.heading"] = { fg = p.gold_yellow, bold = true },
+  ["@markup.italic"] = { italic = true },
+  ["@markup.strong"] = { bold = true },
+  ["@markup.raw"] = { fg = p.shipcove_blue },
+  ["@markup.link"] = { fg = p.shipcove_blue },
+  ["@markup.link.label"] = { fg = p.olive_green },
 
   -- Diagnostics
   ["DiagnosticError"] = { fg = p.bad },
@@ -130,19 +145,6 @@ M.hl_groups = {
   -- Fidget
   ["FidgetTask"] = { link = "Comment" },
   ["FidgetTitle"] = { fg = p.gold_yellow },
-
-  -- Treesitter
-  ["@property"] = { fg = p.dove_blue },
-  ["@variable.builtin"] = { link = "Statement" },
-  ["@string.documentation"] = { link = "Comment" },
-
-  -- Markup
-  ["@markup.heading"] = { fg = p.gold_yellow, bold = true },
-  ["@markup.italic"] = { italic = true },
-  ["@markup.strong"] = { bold = true },
-  ["@markup.raw"] = { fg = p.shipcove_blue },
-  ["@markup.link"] = { fg = p.shipcove_blue },
-  ["@markup.link.label"] = { fg = p.olive_green },
 
   -- Telescope
   ["TelescopeBorder"] = { link = "VertSplit" },
