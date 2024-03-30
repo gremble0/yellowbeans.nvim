@@ -6,9 +6,6 @@ local p = require("yellowbeans.palette")
 M.hl_groups = {
   -- Main highlight groups
   ["Normal"] = { fg = p.fg, bg = p.bg },
-  ["Conceal"] = { link = "Normal" },
-  ["NonText"] = { fg = p.gray_two },
-
   ["Cursor"] = { fg = p.bg, bg = p.fg },
   ["TermCursor"] = { link = "Cursor" },
 
@@ -41,18 +38,19 @@ M.hl_groups = {
 
   -- Text
   ["Comment"] = { fg = p.gray_two, italic = true },
+  ["Conceal"] = { link = "Normal" },
+  ["NonText"] = { link = "Comment" },
   ["LineNr"] = { link = "Comment" },
   ["Special"] = { fg = p.shipcove_blue },
   ["SpecialKey"] = { link = "Comment" },
   ["CursorLineNr"] = { link = "Normal" },
   ["MatchParen"] = { fg = p.gold_yellow, bold = true },
-  ["Title"] = { fg = p.shipcove_blue },
+  ["Title"] = { fg = p.gold_yellow, bold = true },
+  ["Todo"] = { fg = p.olive_green },
 
   ["Bold"] = { bold = true },
   ["Italic"] = { italic = true },
   ["Underlined"] = { underline = true },
-
-  ["Todo"] = { fg = p.olive_green },
 
   -- Menus
   ["Pmenu"] = { fg = p.fg, bg = p.bg },
@@ -67,6 +65,8 @@ M.hl_groups = {
   -- Bad things
   ["Error"] = { fg = p.bad },
   ["ErrorMsg"] = { link = "Error" },
+  ["Warning"] = { fg = p.neutral },
+  ["WarningMsg"] = { link = "Warning" },
 
   -- Other
   ["Directory"] = { fg = p.shipcove_blue },
@@ -107,12 +107,13 @@ M.hl_groups = {
   -- LSP
   ["@lsp.type.keyword"] = { link = "Keyword" },
   ["@lsp.type.variable"] = { link = "None" },
-  ["@lsp.type.property"] = { link = "None" },
+  ["@lsp.type.property"] = { link = "@property" },
 
   -- LspInfo
   ["LspInfoBorder"] = { link = "VertSplit" },
 
   -- Treesitter
+  ["@module"] = { link = "Structure" },
   ["@property"] = { fg = p.dove_blue },
   ["@variable.builtin"] = { link = "Keyword" },
   ["@variable.member"] = { link = "@property" },
@@ -127,8 +128,8 @@ M.hl_groups = {
   ["@markup.link.label"] = { fg = p.olive_green },
 
   -- Diagnostics
-  ["DiagnosticError"] = { fg = p.bad },
-  ["DiagnosticWarn"] = { fg = p.neutral },
+  ["DiagnosticError"] = { link = "Error" },
+  ["DiagnosticWarn"] = { link = "Warning" },
   ["DiagnosticInfo"] = { fg = p.perano_blue },
   ["DiagnosticUnderlineWarn"] = { undercurl = true },
   ["DiagnosticUnderlineError"] = { undercurl = true },
@@ -142,59 +143,58 @@ M.hl_groups = {
   ["GitSignsChange"] = { fg = p.neutral },
   ["GitSignsDelete"] = { fg = p.bad },
 
-  -- Fidget
-  ["FidgetTask"] = { link = "Comment" },
-  ["FidgetTitle"] = { fg = p.gold_yellow },
-
   -- Telescope
   ["TelescopeBorder"] = { link = "VertSplit" },
-  ["TelescopePromptTitle"] = { fg = p.fg },
-  ["TelescopePromptCounter"] = { link = "Comment" },
-  ["TelescopePreviewTitle"] = { link = "TelescopePromptTitle" },
-  ["TelescopeResultsTitle"] = { link = "TelescopePromptTitle" },
+  ["TelescopePromptTitle"] = { link = "Title" },
+  ["TelescopePreviewTitle"] = { link = "Title" },
+  ["TelescopeResultsTitle"] = { link = "Title" },
   ["TelescopeMatching"] = { bold = true, fg = p.shipcove_blue },
-  ["TelescopeSelection"] = { bg = p.gray_one },
 
   -- Nvim-cmp
-  ["CmpItemAbbrDeprecated"] = { fg = p.gray_two, bg = "NONE", strikethrough = true },
-  ["CmpItemAbbrMatch"] = { fg = p.shipcove_blue, bg = "NONE", bold = true },
-  ["CmpItemAbbrMatchFuzzy"] = { fg = p.shipcove_blue, bg = "NONE", bold = true },
+  ["CmpItemAbbrDeprecated"] = { fg = p.gray_two, strikethrough = true },
+  ["CmpItemAbbrMatch"] = { fg = p.shipcove_blue, bold = true },
+  ["CmpItemAbbrMatchFuzzy"] = { fg = p.shipcove_blue, bold = true },
 
-  ["CmpItemKindVariable"] = { link = "Identifier" },
-  ["CmpItemKindField"] = { link = "CmpItemKindVariable" },
-  ["CmpItemKindProperty"] = { link = "CmpItemKindVariable" },
-  ["CmpItemKindEvent"] = { link = "CmpItemKindVariable" },
+  ["CmpItemKindVariable"] = { link = "@variable" },
+  ["CmpItemKindField"] = { link = "@property" },
+  ["CmpItemKindProperty"] = { link = "@property" },
 
   ["CmpItemKindKeyword"] = { link = "Keyword" },
-  ["CmpItemKindText"] = { link = "CmpItemKindText" },
-  ["CmpItemKindEnum"] = { link = "CmpItemKindText" },
 
   ["CmpItemKindConstant"] = { link = "Constant" },
-  ["CmpItemKindConstructor"] = { link = "CmpItemKindConstant" },
-  ["CmpItemKindReference"] = { link = "CmpItemKindConstant" },
-  ["CmpItemKindEnumMember"] = { link = "CmpItemKindConstant" },
+  ["CmpItemKindReference"] = { link = "Constant" },
+  ["CmpItemKindEnumMember"] = { link = "Constant" },
 
   ["CmpItemKindStruct"] = { link = "Structure" },
-  ["CmpItemKindClass"] = { link = "CmpItemKindStruct" },
-  ["CmpItemKindModule"] = { link = "CmpItemKindStruct" },
-  ["CmpItemKindInterface"] = { link = "CmpItemKindStruct" },
-  ["CmpItemKindColor"] = { link = "CmpItemKindStruct" },
+  ["CmpItemKindEnum"] = { link = "Structure" },
+  ["CmpItemKindClass"] = { link = "Structure" },
+  ["CmpItemKindModule"] = { link = "Structure" },
+  ["CmpItemKindInterface"] = { link = "Structure" },
+
+  -- TODO: what are these?
+  -- ["CmpItemKindColor"] = { link = "CmpItemKindStruct" },
+  -- ["CmpItemKindEvent"] = { link = "@variable" },
+  -- ["CmpItemKindValue"] = { link = "CmpItemKindFunction" },
 
   ["CmpItemKindOperator"] = { link = "Operator" },
 
   ["CmpItemKindUnit"] = { link = "String" },
-  ["CmpItemKindSnippet"] = { link = "CmpItemKindUnit" },
+  ["CmpItemKindSnippet"] = { link = "String" },
+  ["CmpItemKindText"] = { link = "String" },
 
   ["CmpItemKindFolder"] = { link = "Directory" },
-  ["CmpItemKindFile"] = { link = "CmpItemKindFolder" },
+  ["CmpItemKindFile"] = { link = "Directory" },
 
   ["CmpItemKindFunction"] = { link = "Function" },
-  ["CmpItemKindTypeParameter"] = { link = "CmpItemKindFunction" },
-  ["CmpItemKindMethod"] = { link = "CmpItemKindFunction" },
-  ["CmpItemKindValue"] = { link = "CmpItemKindFunction" },
+  ["CmpItemKindConstructor"] = { link = "Function" },
+  ["CmpItemKindMethod"] = { link = "Function" },
+  ["CmpItemKindTypeParameter"] = { link = "Type" },
 
   -- Indent-blankline
-  ["IndentBlanklineChar"] = { fg = p.black_four, nocombine = true },
+  ["IndentBlanklineChar"] = { fg = p.black_four, nocombine = true }, -- for older versions
+  ["IblScope"] = { fg = p.gray_two, nocombine = true },
+  ["IblIndent"] = { fg = p.black_four, nocombine = true },
+  ["IblWhitespace"] = { fg = p.bad, nocombine = true },
 
   -- Nvimtree
   ["NvimTreeWindowPicker"] = { fg = p.gold_yellow, bg = p.black_two },
@@ -210,8 +210,8 @@ M.hl_groups = {
 
   ["NeogitSectionHeader"] = { fg = p.gold_yellow, bold = true },
   ["NeogitPopupSectionTitle"] = { link = "NeogitSectionHeader" },
-  ["NeogitPopupOptionKey"] = { fg = p.moss_green },
   ["NeogitUnmergedInto"] = { link = "NeogitSectionHeader" },
+  ["NeogitPopupOptionKey"] = { fg = p.moss_green },
 
   ["NeogitChangeModified"] = { fg = p.neutral },
   ["NeogitChangeAdded"] = { fg = p.good },
@@ -228,21 +228,21 @@ M.hl_groups = {
   -- nvim-notify
   ["NotifyERRORTitle"] = { fg = p.bad },
   ["NotifyWARNTitle"] = { fg = p.neutral },
-  ["NotifyINFOTitle"] = { fg = p.good },
   ["NotifyDEBUGTitle"] = { fg = p.neutral },
-  ["NotifyTRACETitle"] = { fg = p.wewak_pink },
-
-  ["NotifyERRORBorder"] = { link = "VertSplit" },
-  ["NotifyWARNBorder"] = { link = "VertSplit" },
-  ["NotifyINFOBorder"] = { link = "VertSplit" },
-  ["NotifyDEBUGBorder"] = { link = "VertSplit" },
-  ["NotifyTRACEBorder"] = { link = "VertSplit" },
+  ["NotifyINFOTitle"] = { fg = p.good },
+  ["NotifyTRACETitle"] = { fg = p.good },
 
   ["NotifyERRORIcon"] = { link = "NotifyERRORTitle" },
   ["NotifyWARNIcon"] = { link = "NotifyWARNTitle" },
   ["NotifyINFOIcon"] = { link = "NotifyINFOTitle" },
   ["NotifyDEBUGIcon"] = { link = "NotifyDEBUGTitle" },
   ["NotifyTRACEIcon"] = { link = "NotifyTRACETitle" },
+
+  ["NotifyERRORBorder"] = { link = "VertSplit" },
+  ["NotifyWARNBorder"] = { link = "VertSplit" },
+  ["NotifyINFOBorder"] = { link = "VertSplit" },
+  ["NotifyDEBUGBorder"] = { link = "VertSplit" },
+  ["NotifyTRACEBorder"] = { link = "VertSplit" },
 
   ["NotifyERRORBody"] = { link = "Normal" },
   ["NotifyWARNBody"] = { link = "Normal" },

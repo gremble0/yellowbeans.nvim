@@ -23,7 +23,6 @@ return {
   hoki_blue = "#526779",
   dove_blue = "#a9b1d6",
   lavender_purple = "#b6a6ff",
-  wewak_pink = "#f0a0c0",
 
   bad = "#f22b2b",
   bad_bg = "#503030",
