@@ -28,7 +28,9 @@ M.hl_groups = {
   -- Diff mode
   ["Folded"] = { link = "Comment" },
   ["FoldColumn"] = { link = "Folded" },
+  ["DiffText"] = { bg = p.neutral_bg },
   ["DiffAdd"] = { bg = p.good_bg },
+  ["DiffChange"] = { bg = p.neutral_bg },
   ["DiffDelete"] = { bg = p.bad_bg },
 
   -- Tabline
@@ -36,21 +38,19 @@ M.hl_groups = {
   ["TabLine"] = { fg = p.gray_two, bg = p.bg },
   ["TabLineFill"] = { bg = p.black_one },
 
-  -- Text
-  ["Comment"] = { fg = p.gray_two, italic = true },
+  -- Unimportant text
   ["Conceal"] = { link = "Normal" },
+  ["CursorLineNr"] = { link = "Normal" },
+  ["Comment"] = { fg = p.gray_two, italic = true },
   ["NonText"] = { link = "Comment" },
   ["LineNr"] = { link = "Comment" },
-  ["Special"] = { fg = p.shipcove_blue },
   ["SpecialKey"] = { link = "Comment" },
-  ["CursorLineNr"] = { link = "Normal" },
+
+  -- Important text
+  ["Special"] = { fg = p.shipcove_blue },
   ["MatchParen"] = { fg = p.gold_yellow, bold = true },
   ["Title"] = { fg = p.gold_yellow, bold = true },
   ["Todo"] = { fg = p.olive_green },
-
-  ["Bold"] = { bold = true },
-  ["Italic"] = { italic = true },
-  ["Underlined"] = { underline = true },
 
   -- Menus
   ["Pmenu"] = { fg = p.fg, bg = p.bg },
@@ -59,13 +59,14 @@ M.hl_groups = {
   ["PmenuSbar"] = { fg = p.gold_yellow, bg = p.bg },
   ["PmenuThumb"] = { bg = p.gray_two },
 
+  -- Search
   ["Search"] = { bg = p.gray_one },
   ["IncSearch"] = { link = "Search" },
 
   -- Bad things
   ["Error"] = { fg = p.bad },
-  ["ErrorMsg"] = { link = "Error" },
   ["Warning"] = { fg = p.neutral },
+  ["ErrorMsg"] = { link = "Error" },
   ["WarningMsg"] = { link = "Warning" },
 
   -- Other
@@ -79,7 +80,6 @@ M.hl_groups = {
   ["Float"] = { link = "Constant" },
 
   ["String"] = { fg = p.olive_green },
-  ["StringDelimiter"] = { link = "String" },
 
   ["Identifier"] = { fg = p.lavender_purple },
   ["Typedef"] = { link = "Identifier" },
@@ -100,6 +100,7 @@ M.hl_groups = {
 
   ["Type"] = { fg = p.shipcove_blue },
   ["StorageClass"] = { link = "Type" },
+
   ["Structure"] = { fg = p.sky_blue },
 
   ["Delimiter"] = { fg = p.hoki_blue },
@@ -194,7 +195,7 @@ M.hl_groups = {
   ["IndentBlanklineChar"] = { fg = p.black_four, nocombine = true }, -- for older versions
   ["IblScope"] = { fg = p.gray_two, nocombine = true },
   ["IblIndent"] = { fg = p.black_four, nocombine = true },
-  ["IblWhitespace"] = { fg = p.bad, nocombine = true },
+  ["IblWhitespace"] = { fg = p.black_four, nocombine = true },
 
   -- Nvimtree
   ["NvimTreeWindowPicker"] = { fg = p.gold_yellow, bg = p.black_two },
