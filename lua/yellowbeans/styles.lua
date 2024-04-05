@@ -143,6 +143,9 @@ M.hl_groups = {
   ["GitSignsAdd"] = { fg = p.good },
   ["GitSignsChange"] = { fg = p.neutral },
   ["GitSignsDelete"] = { fg = p.bad },
+  ["GitSignsAddInline"] = { link = "DiffAdd" },
+  ["GitSignsChangeInline"] = { link = "DiffChange" },
+  ["GitSignsDeleteInline"] = { link = "DiffDelete" },
 
   -- Telescope
   ["TelescopeBorder"] = { link = "VertSplit" },
