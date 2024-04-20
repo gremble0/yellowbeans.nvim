@@ -1,6 +1,6 @@
 # yellowbeans.nvim
-![Normal](https://github.com/gremble0/yellowbeans.nvim/assets/45577341/42c1aee3-b8ad-4971-a00a-30494db2ce56)
-![Telescope](https://github.com/gremble0/yellowbeans.nvim/assets/45577341/530cb1cb-4950-48c5-b96f-d64afc0d67b0)
+![Visual](https://github.com/gremble0/yellowbeans.nvim/assets/45577341/f5766b1e-bc21-48ea-a69e-9579cf0e412f)
+![Telescope](https://github.com/gremble0/yellowbeans.nvim/assets/45577341/c0cda149-45e1-487f-aa44-c345689aafea)
 
 ## Description
 This is a dependencyless neovim theme initially inspired by jellybeans, but which has become quite different. The theme is written in lua and includes highlight groups for many different nvim plugins such as: TreeSitter, Telescope, nvim-cmp, nvim-notify, and more.
@@ -35,12 +35,18 @@ vim.cmd.colorscheme("yellowbeans")
 ```
 
 ### Lualine
-Yellowbeans also comes with a lualine theme that you can `require()` in your lualine config:
+Yellowbeans also comes with two lualine themes that you can `require()` in your lualine config:
+
+## Lualine themes
+### lualine.themes.yellowbeans
+![Yellowbeans lualine](https://github.com/gremble0/yellowbeans.nvim/assets/45577341/94b4fd28-af92-4eb7-9669-31ab64bbe02a)
+### lualine.themes.yellowbeans-monochrome
+![Yellowbeans lualine monochrome](https://github.com/gremble0/yellowbeans.nvim/assets/45577341/fe0f0e64-4a71-45c6-ae2b-07760d7b813c)
 
 ```lua
 lualine.setup({
   options = {
-    theme = require("yellowbeans.lualine"),
+    theme = require("lualine.themes.yellowbeans"), -- OR: "lualine.themes.yellowbeans.monochrome"
   },
 })
 ```

@@ -108,7 +108,6 @@ M.hl_groups = {
   -- LSP
   ["@lsp.type.keyword"] = { link = "Keyword" },
   ["@lsp.type.variable"] = { link = "None" },
-  ["@lsp.type.macro"] = { link = "None" },
   ["@lsp.type.property"] = { link = "@property" },
 
   -- LspInfo
