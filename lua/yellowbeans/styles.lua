@@ -108,6 +108,7 @@ M.hl_groups = {
   -- LSP
   ["@lsp.type.keyword"] = { link = "Keyword" },
   ["@lsp.type.variable"] = { link = "None" },
+  ["@lsp.type.macro"] = { link = "None" },
   ["@lsp.type.property"] = { link = "@property" },
 
   -- LspInfo
@@ -116,6 +117,7 @@ M.hl_groups = {
   -- Treesitter
   ["@module"] = { link = "Structure" },
   ["@property"] = { fg = p.dove_blue },
+  ["@attribute"] = { fg = p.shipcove_blue },
   ["@variable.builtin"] = { link = "Keyword" },
   ["@variable.member"] = { link = "@property" },
   ["@string.documentation"] = { link = "Comment" },

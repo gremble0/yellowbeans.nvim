@@ -5,12 +5,14 @@ return {
 
   black_one = "#101010",
   black_two = "#191919",
-  black_three = "#202020",
+  black_three = "#202020", -- TODO: remove
   black_four = "#282828",
-  white_one = "#aaaaaa",
+  black_five = "#303030",
   gray_one = "#333333",
   gray_two = "#606060",
   gray_three = "#777777",
+  white_one = "#aaaaaa",
+  white_two = "#888888",
 
   gold_yellow = "#e1b655",
   dark_yellow = "#d4aa55",
