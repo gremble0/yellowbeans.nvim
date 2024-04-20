@@ -4,8 +4,7 @@ return {
   fg = "#cccccc",
 
   black_one = "#101010",
-  black_two = "#191919",
-  black_three = "#202020", -- TODO: remove
+  black_two = "#1c1c1c",
   black_four = "#282828",
   black_five = "#303030",
   gray_one = "#333333",
