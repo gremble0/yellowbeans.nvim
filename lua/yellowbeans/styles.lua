@@ -7,7 +7,6 @@ M.hl_groups = {
   -- Main highlight groups
   ["Normal"] = { fg = p.fg, bg = p.bg },
   ["Cursor"] = { fg = p.bg, bg = p.fg },
-  ["TermCursor"] = { link = "Cursor" },
 
   -- Background things
   ["SignColumn"] = { fg = p.fg, bg = p.bg },
@@ -56,9 +55,17 @@ M.hl_groups = {
   -- Menus
   ["Pmenu"] = { fg = p.fg, bg = p.bg },
   ["PmenuBg"] = { link = "VertSplit" },
-  ["PmenuSel"] = { fg = p.bg, bg = p.gold_yellow },
+  ["PmenuSel"] = { bg = p.gray_one },
   ["PmenuSbar"] = { fg = p.gold_yellow, bg = p.bg },
   ["PmenuThumb"] = { bg = p.gray_two },
+
+  -- Pager
+  ["MoreMsg"] = { fg = p.shipcove_blue, bold = true },
+  ["ModeMsg"] = { fg = p.shipcove_blue, bold = true },
+  ["Question"] = { fg = p.shipcove_blue, bold = true }, -- "Press ENTER or type command to continue" - no clue why its called this
+
+  -- Quickfix list
+  ["QuickFixLine"] = { link = "None" },
 
   -- Floating windows
   ["NormalFloat"] = { link = "Normal" },
@@ -140,6 +147,8 @@ M.hl_groups = {
   ["DiagnosticError"] = { link = "Error" },
   ["DiagnosticWarn"] = { link = "Warning" },
   ["DiagnosticInfo"] = { fg = p.perano_blue },
+  ["DiagnosticHint"] = { link = "DiagnosticInfo" },
+  ["DiagnosticOk"] = { link = "DiagnosticInfo" },
   ["DiagnosticUnderlineWarn"] = { undercurl = true },
   ["DiagnosticUnderlineError"] = { undercurl = true },
   ["DiagnosticUnderlineInfo"] = { undercurl = true },
@@ -269,7 +278,8 @@ M.hl_groups = {
   ["MasonMutedBlock"] = { bg = p.black_two },
   ["MasonMutedBlockBold"] = { bg = p.black_two, bold = true },
 
-  ["MasonHeader"] = { fg = p.bg, bg = p.gold_yellow },
+  ["MasonHeader"] = { link = "Title" },
+  ["MasonHeading"] = { link = "Title" },
   ["MasonHeaderSecondary"] = { link = "MasonHeader" },
   ["MasonWarning"] = { fg = p.neutral },
 
