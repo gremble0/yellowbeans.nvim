@@ -16,6 +16,7 @@ M.hl_groups = {
   ["CursorColumn"] = { link = "ColorColumn" },
   ["CursorLine"] = { link = "ColorColumn" },
   ["VertSplit"] = { fg = p.black_four },
+  ["WinSeparator"] = { link = "VertSplit" },
 
   ["StatusLine"] = { fg = p.fg, bg = p.black_two },
   ["StatusLineNC"] = { fg = p.white_one, bg = p.black_two },
@@ -59,9 +60,14 @@ M.hl_groups = {
   ["PmenuSbar"] = { fg = p.gold_yellow, bg = p.bg },
   ["PmenuThumb"] = { bg = p.gray_two },
 
+  -- Floating windows
+  ["NormalFloat"] = { link = "Normal" },
+  ["FloatBorder"] = { link = "VertSplit" },
+
   -- Search
   ["Search"] = { bg = p.gray_one },
   ["IncSearch"] = { link = "Search" },
+  ["CurSearch"] = { link = "Search" },
 
   -- Bad things
   ["Error"] = { fg = p.bad },
@@ -117,6 +123,7 @@ M.hl_groups = {
   ["@module"] = { link = "Structure" },
   ["@property"] = { fg = p.dove_blue },
   ["@attribute"] = { fg = p.shipcove_blue },
+  ["@variable"] = { link = "Identifier" },
   ["@variable.builtin"] = { link = "Keyword" },
   ["@variable.member"] = { link = "@property" },
   ["@string.documentation"] = { link = "Comment" },
