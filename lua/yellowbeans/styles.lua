@@ -60,9 +60,9 @@ M.hl_groups = {
   ["PmenuThumb"] = { bg = p.gray_two },
 
   -- Pager
-  ["MoreMsg"] = { fg = p.shipcove_blue, bold = true },
-  ["ModeMsg"] = { fg = p.shipcove_blue, bold = true },
-  ["Question"] = { fg = p.shipcove_blue, bold = true }, -- "Press ENTER or type command to continue" - no clue why its called this
+  ["MoreMsg"] = { fg = p.olive_green, bold = true },
+  ["ModeMsg"] = { fg = p.olive_green, bold = true },
+  ["Question"] = { fg = p.olive_green, bold = true }, -- "Press ENTER or type command to continue" - no clue why its called this
 
   -- Quickfix list
   ["QuickFixLine"] = { link = "None" },
@@ -121,6 +121,7 @@ M.hl_groups = {
   -- LSP
   ["@lsp.type.keyword"] = { link = "Keyword" },
   ["@lsp.type.variable"] = { link = "None" },
+  ["@lsp.type.modifier"] = { link = "None" },
   ["@lsp.type.property"] = { link = "@property" },
 
   -- LspInfo
