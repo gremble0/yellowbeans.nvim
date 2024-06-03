@@ -37,12 +37,12 @@ vim.cmd.colorscheme("yellowbeans")
 ### Lualine
 Yellowbeans also comes with two lualine themes that you can `require()` in your lualine config:
 
-## Lualine themes
 ### lualine.themes.yellowbeans
 ![Yellowbeans lualine](https://github.com/gremble0/yellowbeans.nvim/assets/45577341/94b4fd28-af92-4eb7-9669-31ab64bbe02a)
 ### lualine.themes.yellowbeans-monochrome
 ![Yellowbeans lualine monochrome](https://github.com/gremble0/yellowbeans.nvim/assets/45577341/fe0f0e64-4a71-45c6-ae2b-07760d7b813c)
 
+You can use them like so:
 ```lua
 lualine.setup({
   options = {
