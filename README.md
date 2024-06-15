@@ -13,7 +13,7 @@ Install it using your favorite nvim package manager, This is how to do it with [
 
 -- With lazy you could also run the command to apply the theme here
 {
-  "gremble0/yellowbeans.nvim"
+  "gremble0/yellowbeans.nvim",
   priority = 1000,
   config = function()
     vim.cmd.colorscheme("yellowbeans")
