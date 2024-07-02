@@ -2,7 +2,6 @@ local M = {}
 
 local p = require("yellowbeans.palette")
 
--- TODO lazy load file/plugin specific hl groups?
 M.hl_groups = {
   -- Main highlight groups
   ["Normal"] = { fg = p.fg, bg = p.bg },
@@ -192,11 +191,6 @@ M.hl_groups = {
   ["CmpItemKindClass"] = { link = "Structure" },
   ["CmpItemKindModule"] = { link = "Structure" },
   ["CmpItemKindInterface"] = { link = "Structure" },
-
-  -- TODO: what are these?
-  -- ["CmpItemKindColor"] = { link = "CmpItemKindStruct" },
-  -- ["CmpItemKindEvent"] = { link = "@variable" },
-  -- ["CmpItemKindValue"] = { link = "CmpItemKindFunction" },
 
   ["CmpItemKindOperator"] = { link = "Operator" },
 
