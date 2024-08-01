@@ -9,12 +9,9 @@ This is a dependencyless neovim theme initially inspired by jellybeans, but whic
 Install it using your favorite nvim package manager, This is how to do it with [lazy](https://github.com/folke/lazy.nvim)
 
 ```lua
-{ "gremble0/yellowbeans.nvim" }
-
--- With lazy you could also run the command to apply the theme here
 {
   "gremble0/yellowbeans.nvim",
-  priority = 1000,
+  priority = 1000, -- Theme should load before most other plugins
   config = function()
     vim.cmd.colorscheme("yellowbeans")
   end,
@@ -46,7 +43,7 @@ You can use them like so:
 ```lua
 lualine.setup({
   options = {
-    theme = require("lualine.themes.yellowbeans"), -- OR: "lualine.themes.yellowbeans.monochrome"
+    theme = require("lualine.themes.yellowbeans"), -- OR: "lualine.themes.yellowbeans-monochrome"
   },
 })
 ```
