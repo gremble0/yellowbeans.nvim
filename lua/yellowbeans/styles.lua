@@ -283,6 +283,10 @@ M.hl_groups = {
   ["MasonHighlightBlockSecondary"] = { link = "MasonHighlightBlock" },
   ["MasonHighlightBlockBold"] = { bg = p.gray_one, bold = true },
   ["MasonHighlightBlockBoldSecondary"] = { link = "MasonHighlightBlockBold" },
+
+  -- Snacks
+  ["SnacksInputBorder"] = { link = "FloatBorder" },
+  ["SnacksInputTitle"] = { link = "Title" },
 }
 
 return M
