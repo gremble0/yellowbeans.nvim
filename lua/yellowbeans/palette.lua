@@ -30,5 +30,5 @@ return {
   neutral = "#ffa500",
   neutral_bg = "#6B572A",
   good = "#b3e27c",
-  good_bg = "#2e3127",
+  good_bg = "#2f5937",
 }

@@ -25,12 +25,15 @@ M.hl_groups = {
   ["Visual"] = { bg = p.gray_one },
 
   -- Diff mode
+  ["Added"] = { fg = p.good },
+  ["Changed"] = { fg = p.neutral },
+  ["Removed"] = { fg = p.bad },
   ["Folded"] = { link = "Comment" },
   ["FoldColumn"] = { link = "Folded" },
   ["DiffText"] = { bg = p.neutral_bg },
-  ["DiffAdd"] = { bg = p.good_bg },
-  ["DiffChange"] = { bg = p.neutral_bg },
-  ["DiffDelete"] = { bg = p.bad_bg },
+  ["DiffAdd"] = { link = "Added" },
+  ["DiffChange"] = { link = "Changed" },
+  ["DiffDelete"] = { link = "Removed" },
 
   -- Tabline
   ["TabLineSel"] = { bg = p.bg, bold = true },
@@ -134,6 +137,7 @@ M.hl_groups = {
   ["@variable.builtin"] = { link = "Keyword" },
   ["@variable.member"] = { link = "@property" },
   ["@string.documentation"] = { link = "Comment" },
+  ["@string.special.path.diff"] = { link = "None" },
 
   -- Markup
   ["@markup.heading"] = { fg = p.gold_yellow, bold = true },
@@ -237,8 +241,8 @@ M.hl_groups = {
   ["NeogitHunkHeaderHighlight"] = { bg = p.gray_two },
 
   -- Vim fugitive
-  ["diffRemoved"] = { fg = p.bad },
-  ["diffAdded"] = { fg = p.good },
+  ["diffRemoved"] = { link = "Removed" },
+  ["diffAdded"] = { link = "Added" },
   ["diffSubname"] = { fg = p.shipcove_blue },
 
   -- nvim-notify
