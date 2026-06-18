@@ -4,7 +4,7 @@ local p = require("yellowbeans.palette")
 return {
   normal = {
     a = { fg = p.bg, bg = p.gold_yellow, gui = "bold" },
-    b = { fg = p.fg, bg = p.black_four },
+    b = { fg = p.fg, bg = p.black_three },
     c = { fg = p.white_one, bg = p.black_two },
   },
   insert = {
@@ -20,8 +20,8 @@ return {
     a = { fg = p.bg, bg = p.lavender_purple, gui = "bold" },
   },
   inactive = {
-    a = { fg = p.gray_two, bg = p.black_two },
-    b = { fg = p.gray_two, bg = p.black_two },
-    c = { fg = p.gray_two, bg = p.black_two },
+    a = { link = "StatusLineNC" },
+    b = { link = "StatusLineNC" },
+    c = { link = "StatusLineNC" },
   },
 }

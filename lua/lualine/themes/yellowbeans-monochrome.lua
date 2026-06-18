@@ -21,8 +21,8 @@ return {
     a = { fg = p.lavender_purple, bg = p.black_two, gui = "bold" },
   },
   inactive = {
-    a = { fg = p.gray_two, bg = p.black_two },
-    b = { fg = p.gray_two, bg = p.black_two },
-    c = { fg = p.gray_two, bg = p.black_two },
+    a = { link = "StatusLineNC" },
+    b = { link = "StatusLineNC" },
+    c = { link = "StatusLineNC" },
   },
 }

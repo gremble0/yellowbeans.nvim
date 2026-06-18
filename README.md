@@ -31,6 +31,15 @@ colorscheme yellowbeans
 vim.cmd.colorscheme("yellowbeans")
 ```
 
+## API
+If you want to access the palette used for the colorscheme you can do it like so:
+```lua
+local palette = require("yellowbeans.palette")
+
+-- Can for example be used to apply custom highlights:
+vim.api.nvim_set_hl(0, "MyCustomHighlightGroup", { fg = palette.gold_yellow })
+```
+
 ### Lualine
 Yellowbeans also comes with two lualine themes that you can `require()` in your lualine config:
 

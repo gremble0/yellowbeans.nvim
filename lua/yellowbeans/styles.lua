@@ -1,8 +1,7 @@
-local M = {}
-
 local p = require("yellowbeans.palette")
 
-M.hl_groups = {
+---@type table<string, vim.api.keyset.highlight>
+return {
   -- Main highlight groups
   ["Normal"] = { fg = p.fg, bg = p.bg },
   ["Cursor"] = { fg = p.bg, bg = p.fg },
@@ -13,11 +12,11 @@ M.hl_groups = {
   ["ColorColumn"] = { bg = p.black_two },
   ["CursorColumn"] = { link = "ColorColumn" },
   ["CursorLine"] = { link = "ColorColumn" },
-  ["VertSplit"] = { fg = p.black_four },
+  ["VertSplit"] = { fg = p.black_three },
   ["WinSeparator"] = { link = "VertSplit" },
 
   ["StatusLine"] = { fg = p.fg, bg = p.black_two },
-  ["StatusLineNC"] = { fg = p.white_one, bg = p.black_two },
+  ["StatusLineNC"] = { fg = p.gray_two, bg = p.black_two },
 
   ["WinBar"] = { link = "StatusLine" },
   ["WinbarNC"] = { link = "StatusLineNC" },
@@ -30,10 +29,10 @@ M.hl_groups = {
   ["Removed"] = { fg = p.bad },
   ["Folded"] = { link = "Comment" },
   ["FoldColumn"] = { link = "Folded" },
-  ["DiffText"] = { bg = p.neutral_bg },
-  ["DiffAdd"] = { link = "Added" },
-  ["DiffChange"] = { link = "Changed" },
-  ["DiffDelete"] = { link = "Removed" },
+  ["DiffText"] = { bg = p.neutral_tint },
+  ["DiffAdd"] = { bg = p.good_tint },
+  ["DiffChange"] = { bg = p.neutral_tint },
+  ["DiffDelete"] = { bg = p.bad_tint },
 
   -- Tabline
   ["TabLineSel"] = { bg = p.bg, bold = true },
@@ -87,7 +86,7 @@ M.hl_groups = {
   -- Other
   ["Directory"] = { fg = p.shipcove_blue },
 
-  -- Preferred groups for syntax highlighting (other groups also refer to these,
+  -- Preferred groups for syntax highlighting (other groups also link to these)
   ["Constant"] = { fg = p.moss_green },
   ["Character"] = { link = "Constant" },
   ["Number"] = { link = "Constant" },
@@ -115,10 +114,9 @@ M.hl_groups = {
 
   ["Type"] = { fg = p.shipcove_blue },
   ["StorageClass"] = { link = "Type" },
+  ["Structure"] = { link = "Type" },
 
-  ["Structure"] = { fg = p.sky_blue },
-
-  ["Delimiter"] = { fg = p.hoki_blue },
+  ["Delimiter"] = { fg = p.shipcove_blue_tint },
 
   -- LSP
   ["@lsp.type.keyword"] = { link = "Keyword" },
@@ -211,10 +209,10 @@ M.hl_groups = {
   ["CmpItemKindTypeParameter"] = { link = "Type" },
 
   -- Indent-blankline
-  ["IndentBlanklineChar"] = { fg = p.black_four, nocombine = true }, -- for older versions
+  ["IndentBlanklineChar"] = { fg = p.black_three, nocombine = true }, -- for older versions
   ["IblScope"] = { fg = p.gray_two, nocombine = true },
-  ["IblIndent"] = { fg = p.black_four, nocombine = true },
-  ["IblWhitespace"] = { fg = p.black_four, nocombine = true },
+  ["IblIndent"] = { fg = p.black_three, nocombine = true },
+  ["IblWhitespace"] = { fg = p.black_three, nocombine = true },
 
   -- Nvimtree
   ["NvimTreeWindowPicker"] = { fg = p.gold_yellow, bg = p.black_two },
@@ -225,25 +223,8 @@ M.hl_groups = {
   ["netrwClassify"] = { link = "Directory" },
 
   -- Neogit
-  ["NeogitBranch"] = { fg = p.moss_green, bold = true },
-  ["NeogitRemote"] = { fg = p.olive_green, bold = true },
-
-  ["NeogitSectionHeader"] = { fg = p.gold_yellow, bold = true },
-  ["NeogitPopupSectionTitle"] = { link = "NeogitSectionHeader" },
-  ["NeogitUnmergedInto"] = { link = "NeogitSectionHeader" },
-  ["NeogitPopupOptionKey"] = { fg = p.moss_green },
-
-  ["NeogitChangeModified"] = { fg = p.neutral },
-  ["NeogitChangeAdded"] = { fg = p.good },
-  ["NeogitChangeRemoved"] = { fg = p.bad },
-
-  ["NeogitHunkHeader"] = { fg = p.white_one, bg = p.gray_one },
-  ["NeogitHunkHeaderHighlight"] = { bg = p.gray_two },
-
-  -- Vim fugitive
-  ["diffRemoved"] = { link = "Removed" },
-  ["diffAdded"] = { link = "Added" },
-  ["diffSubname"] = { fg = p.shipcove_blue },
+  ["NeogitBranch"] = { fg = p.gold_yellow, bold = true },
+  ["NeogitRemote"] = { fg = p.perano_blue, bold = true },
 
   -- nvim-notify
   ["NotifyERRORTitle"] = { fg = p.bad },
@@ -292,5 +273,3 @@ M.hl_groups = {
   ["SnacksInputBorder"] = { link = "FloatBorder" },
   ["SnacksInputTitle"] = { link = "Title" },
 }
-
-return M
